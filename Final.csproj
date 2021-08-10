@@ -170,6 +170,10 @@
     <Compile Include="Migrations\20210810190909_init2.designer.cs">
       <DependentUpon>20210810190909_init2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210810215012_PurchaseOrders.cs" />
+    <Compile Include="Migrations\20210810215012_PurchaseOrders.designer.cs">
+      <DependentUpon>20210810215012_PurchaseOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Models\BusinessIssue.cs" />
     <Compile Include="Models\BusinessInformation.cs" />
@@ -182,6 +186,8 @@
     <Compile Include="Models\InvoiceDetail.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\PurchaseOrder.cs" />
+    <Compile Include="Models\PurchaseOrderDetail.cs" />
     <Compile Include="Models\Vendor.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

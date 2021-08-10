@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace Final.Models
 {
-    class Product
+    class PurchaseOrderDetail
     {
         public int Id { get; set; }
         public DateTime? CreatedAt { get; set; } = DateTime.Now;
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public double Price { get; set; }
-        public int QuantityOnHand { get; set; }
-
+        public virtual Product Product { get; set; }
+        public int QuantityPurchased { get; set; }
     }
 }

@@ -9,8 +9,9 @@ namespace Final.Models
     class ForumDetail
     {
         public int Id { get; set; }
-        public DateTime? DateCreated { get; set; } = DateTime.Now;
+        public DateTime? CreatedAt { get; set; } = DateTime.Now;
         public string Content { get; set; }
-        public Forum Forum { get; set; }
+        public virtual Forum Forum { get; set; }
+        public virtual Customer Customer { get; set; }
     }
 }

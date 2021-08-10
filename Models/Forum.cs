@@ -9,7 +9,7 @@ namespace Final.Models
     class Forum
     {
         public int Id { get; set; }
-        public DateTime? DateCreated { get; set; } = DateTime.Now;
+        public DateTime? CreatedAt { get; set; } = DateTime.Now;
         public string Name { get; set; }
     }
 }

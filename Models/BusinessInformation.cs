@@ -9,7 +9,7 @@ namespace Final.Models
     class BusinessInformation
     {
         public int Id { get; set; }
-        public DateTime? DateCreated { get; set; } = DateTime.Now;
+        public DateTime? CreatedAt { get; set; } = DateTime.Now;
         public decimal Longitute { get; set; }
         public decimal Latitude { get; set; }
         public virtual BusinessType Type { get; set; }

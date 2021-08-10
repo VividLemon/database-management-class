@@ -9,7 +9,7 @@ namespace Final.Models
     class BusinessIssue
     {
         public int Id { get; set; }
-        public DateTime? DateCreated { get; set; } = DateTime.Now;
+        public DateTime? CreatedAt { get; set; } = DateTime.Now;
         public string Issue { get; set; }
         public virtual BusinessInformation Business { get; set; }
     }
