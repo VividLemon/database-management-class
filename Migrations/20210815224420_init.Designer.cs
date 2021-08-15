@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Final.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20210815062750_Standardize")]
-    partial class Standardize
+    [Migration("20210815224420_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,6 +27,9 @@ namespace Final.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<decimal>("Latitude")
                         .HasColumnType("decimal(18,2)");
@@ -54,6 +57,9 @@ namespace Final.Migrations
                     b.Property<int?>("BusinessId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Issue")
                         .HasColumnType("nvarchar(max)");
 
@@ -70,6 +76,9 @@ namespace Final.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
@@ -88,6 +97,9 @@ namespace Final.Migrations
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
@@ -115,6 +127,9 @@ namespace Final.Migrations
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("datetime2");
@@ -146,6 +161,9 @@ namespace Final.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -163,6 +181,9 @@ namespace Final.Migrations
 
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<int?>("CustomerId")
                         .HasColumnType("int");
@@ -186,6 +207,9 @@ namespace Final.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<int?>("customerId")
                         .HasColumnType("int");
 
@@ -202,6 +226,9 @@ namespace Final.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<int?>("InvoiceId")
                         .HasColumnType("int");
@@ -240,9 +267,6 @@ namespace Final.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
-                    b.Property<int>("QuantityOnHand")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.ToTable("Products");
@@ -255,11 +279,11 @@ namespace Final.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("PurchaseDate")
+                    b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("PurchaseOrderDetailId")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("PurchaseDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<decimal>("TotalPaid")
                         .HasColumnType("decimal(18,2)");
@@ -268,8 +292,6 @@ namespace Final.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("PurchaseOrderDetailId");
 
                     b.HasIndex("VendorId");
 
@@ -283,7 +305,13 @@ namespace Final.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<int?>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PurchaseOrderId")
                         .HasColumnType("int");
 
                     b.Property<int>("QuantityPurchased")
@@ -292,6 +320,8 @@ namespace Final.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ProductId");
+
+                    b.HasIndex("PurchaseOrderId");
 
                     b.ToTable("PurchaseOrderDetails");
                 });
@@ -303,13 +333,20 @@ namespace Final.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("password")
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("username")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("Username")
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Username")
+                        .IsUnique()
+                        .HasFilter("[Username] IS NOT NULL");
 
                     b.ToTable("Users");
                 });
@@ -323,6 +360,9 @@ namespace Final.Migrations
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
@@ -386,10 +426,6 @@ namespace Final.Migrations
 
             modelBuilder.Entity("Final.Models.PurchaseOrder", b =>
                 {
-                    b.HasOne("Final.Models.PurchaseOrderDetail", "PurchaseOrderDetail")
-                        .WithMany()
-                        .HasForeignKey("PurchaseOrderDetailId");
-
                     b.HasOne("Final.Models.Vendor", "Vendor")
                         .WithMany()
                         .HasForeignKey("VendorId");
@@ -400,6 +436,10 @@ namespace Final.Migrations
                     b.HasOne("Final.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId");
+
+                    b.HasOne("Final.Models.PurchaseOrder", "PurchaseOrder")
+                        .WithMany()
+                        .HasForeignKey("PurchaseOrderId");
                 });
 #pragma warning restore 612, 618
         }

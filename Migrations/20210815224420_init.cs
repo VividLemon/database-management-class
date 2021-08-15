@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Final.Migrations
 {
-    public partial class Standardize : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,6 +13,7 @@ namespace Final.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedAt = table.Column<DateTime>(nullable: true),
                     Type = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -26,6 +27,7 @@ namespace Final.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedAt = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Address = table.Column<string>(nullable: true),
                     State = table.Column<string>(nullable: true),
@@ -43,6 +45,7 @@ namespace Final.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedAt = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     DateOfBirth = table.Column<DateTime>(nullable: false),
                     PhoneNumber = table.Column<string>(nullable: true),
@@ -62,6 +65,7 @@ namespace Final.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedAt = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -78,8 +82,7 @@ namespace Final.Migrations
                     CreatedAt = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
-                    Price = table.Column<double>(nullable: false),
-                    QuantityOnHand = table.Column<int>(nullable: false)
+                    Price = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -92,8 +95,9 @@ namespace Final.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    username = table.Column<string>(nullable: true),
-                    password = table.Column<string>(nullable: true)
+                    CreatedAt = table.Column<DateTime>(nullable: true),
+                    Username = table.Column<string>(nullable: true),
+                    Password = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -106,6 +110,7 @@ namespace Final.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedAt = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Address = table.Column<string>(nullable: true),
                     State = table.Column<string>(nullable: true),
@@ -123,6 +128,7 @@ namespace Final.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedAt = table.Column<DateTime>(nullable: true),
                     Longitute = table.Column<decimal>(nullable: false),
                     Latitude = table.Column<decimal>(nullable: false),
                     TypeId = table.Column<int>(nullable: true)
@@ -144,6 +150,7 @@ namespace Final.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedAt = table.Column<DateTime>(nullable: true),
                     customerId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -163,6 +170,7 @@ namespace Final.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedAt = table.Column<DateTime>(nullable: true),
                     Content = table.Column<string>(nullable: true),
                     ForumId = table.Column<int>(nullable: true),
                     CustomerId = table.Column<int>(nullable: true)
@@ -185,21 +193,23 @@ namespace Final.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PurchaseOrderDetails",
+                name: "PurchaseOrders",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ProductId = table.Column<int>(nullable: true),
-                    QuantityPurchased = table.Column<int>(nullable: false)
+                    CreatedAt = table.Column<DateTime>(nullable: true),
+                    PurchaseDate = table.Column<DateTime>(nullable: false),
+                    TotalPaid = table.Column<decimal>(nullable: false),
+                    VendorId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PurchaseOrderDetails", x => x.Id);
+                    table.PrimaryKey("PK_PurchaseOrders", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PurchaseOrderDetails_Products_ProductId",
-                        column: x => x.ProductId,
-                        principalTable: "Products",
+                        name: "FK_PurchaseOrders_Vendors_VendorId",
+                        column: x => x.VendorId,
+                        principalTable: "Vendors",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -210,6 +220,7 @@ namespace Final.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedAt = table.Column<DateTime>(nullable: true),
                     Issue = table.Column<string>(nullable: true),
                     BusinessId = table.Column<int>(nullable: true)
                 },
@@ -230,6 +241,7 @@ namespace Final.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedAt = table.Column<DateTime>(nullable: true),
                     InvoiceId = table.Column<int>(nullable: true),
                     productId = table.Column<int>(nullable: true),
                     QuantityPurchased = table.Column<int>(nullable: false)
@@ -252,29 +264,29 @@ namespace Final.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PurchaseOrders",
+                name: "PurchaseOrderDetails",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    PurchaseOrderDetailId = table.Column<int>(nullable: true),
-                    PurchaseDate = table.Column<DateTime>(nullable: false),
-                    TotalPaid = table.Column<decimal>(nullable: false),
-                    VendorId = table.Column<int>(nullable: true)
+                    CreatedAt = table.Column<DateTime>(nullable: true),
+                    ProductId = table.Column<int>(nullable: true),
+                    QuantityPurchased = table.Column<int>(nullable: false),
+                    PurchaseOrderId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PurchaseOrders", x => x.Id);
+                    table.PrimaryKey("PK_PurchaseOrderDetails", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PurchaseOrders_PurchaseOrderDetails_PurchaseOrderDetailId",
-                        column: x => x.PurchaseOrderDetailId,
-                        principalTable: "PurchaseOrderDetails",
+                        name: "FK_PurchaseOrderDetails_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_PurchaseOrders_Vendors_VendorId",
-                        column: x => x.VendorId,
-                        principalTable: "Vendors",
+                        name: "FK_PurchaseOrderDetails_PurchaseOrders_PurchaseOrderId",
+                        column: x => x.PurchaseOrderId,
+                        principalTable: "PurchaseOrders",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -320,14 +332,21 @@ namespace Final.Migrations
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PurchaseOrders_PurchaseOrderDetailId",
-                table: "PurchaseOrders",
-                column: "PurchaseOrderDetailId");
+                name: "IX_PurchaseOrderDetails_PurchaseOrderId",
+                table: "PurchaseOrderDetails",
+                column: "PurchaseOrderId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PurchaseOrders_VendorId",
                 table: "PurchaseOrders",
                 column: "VendorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_Username",
+                table: "Users",
+                column: "Username",
+                unique: true,
+                filter: "[Username] IS NOT NULL");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -345,7 +364,7 @@ namespace Final.Migrations
                 name: "InvoiceDetails");
 
             migrationBuilder.DropTable(
-                name: "PurchaseOrders");
+                name: "PurchaseOrderDetails");
 
             migrationBuilder.DropTable(
                 name: "Users");
@@ -360,10 +379,10 @@ namespace Final.Migrations
                 name: "Invoices");
 
             migrationBuilder.DropTable(
-                name: "PurchaseOrderDetails");
+                name: "Products");
 
             migrationBuilder.DropTable(
-                name: "Vendors");
+                name: "PurchaseOrders");
 
             migrationBuilder.DropTable(
                 name: "BusinessTypes");
@@ -372,7 +391,7 @@ namespace Final.Migrations
                 name: "Customers");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "Vendors");
         }
     }
 }

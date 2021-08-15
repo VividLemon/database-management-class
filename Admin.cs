@@ -28,9 +28,9 @@ namespace Final
                 Employee employee = new Employee { Address = "f12", DateOfBirth = DateTime.Now, Name = "Issayah", PhoneNumber = "608", Salary = 55, State = "Wi", Zip = "50558" };
                 Models.Forum forum1 = new Models.Forum { Name = "Forum 1" };
                 Customer customer1 = new Customer { Name = "Not Issayah", PhoneNumber = "608", State = "Wi", Zip = "58383" };
-                ForumDetail forumDetail1 = new ForumDetail { Forum = forum1, Content = "Something", Customer = customer1 };
+                ForumDetail forumDetail1 = new ForumDetail { Forum = forum1, Content = "I love this app", Customer = customer1 };
                 Invoice invoice1 = new Invoice { customer = customer1 };
-                Product product1 = new Product { Description = "Product desc", Name = "Name", Price = 5 };
+                Product product1 = new Product { Description = "Access our city offers inspection services where we come and survey your business and give it an independent rating for accessability.", Name = "Inspection", Price = 5 };
                 InvoiceDetail invoiceDetail = new InvoiceDetail { Invoice = invoice1, product = product1, QuantityPurchased = 2 };
                 Vendor vendor1 = new Vendor { Name = "Issayahs house", PhoneNumber = "123", State = "Wi", Zip = "543", Address = "f133" };
                 PurchaseOrder purchase1 = new PurchaseOrder { Vendor = vendor1, PurchaseDate = DateTime.Now, TotalPaid = 55 };

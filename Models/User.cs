@@ -33,7 +33,7 @@ namespace Final.Models
         }
 
         public int Id { get; set; }
-        public DateTime? CreatedAt { get; } = DateTime.Now;
+        public DateTime? CreatedAt { get; set; } = DateTime.Now;
         public string Username { get; set; }
 
         public string Password { get; set; }

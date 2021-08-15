@@ -32,7 +32,11 @@ namespace Final
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Forum));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReturn = new System.Windows.Forms.Button();
+            this.finalDataSet1 = new Final.FinalDataSet();
+            this.finalDataSet2 = new Final.FinalDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -55,6 +59,16 @@ namespace Final
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
+            // finalDataSet1
+            // 
+            this.finalDataSet1.DataSetName = "FinalDataSet";
+            this.finalDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // finalDataSet2
+            // 
+            this.finalDataSet2.DataSetName = "FinalDataSet";
+            this.finalDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Forum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -66,6 +80,8 @@ namespace Final
             this.Text = "Forum";
             this.Load += new System.EventHandler(this.Forum_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -74,5 +90,7 @@ namespace Final
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnReturn;
+        private FinalDataSet finalDataSet1;
+        private FinalDataSet finalDataSet2;
     }
 }

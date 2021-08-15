@@ -1043,4 +1043,10 @@
         1w0AAAAAAJdVo+175X//9/8A7/R2NveiJRkAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="finalDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>16, 21</value>
+  </metadata>
+  <metadata name="finalDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>141, 17</value>
+  </metadata>
 </root>
