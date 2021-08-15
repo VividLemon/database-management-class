@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Final.Models
 {
@@ -11,7 +9,7 @@ namespace Final.Models
     {
         public static User VerifyLogin(string username, string password)
         {
-            using (var context = new DatabaseContext())
+            using (DatabaseContext context = new DatabaseContext())
             {
                 User user = context.Users.SingleOrDefault(u => u.Username == username && u.Password == HashPassword(password));
                 if (user != null)
@@ -37,6 +35,7 @@ namespace Final.Models
         public int Id { get; set; }
         public DateTime? CreatedAt { get; } = DateTime.Now;
         public string Username { get; set; }
+
         public string Password { get; set; }
     }
 }

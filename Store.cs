@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Final
@@ -19,7 +12,7 @@ namespace Final
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
+            Owner.Show();
             Close();
             // Store opens up a view of different products.
             // Products have a view button which shows various info
@@ -27,8 +20,10 @@ namespace Final
 
         private void Store_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'finalDataSet1.Products' table. You can move, or remove it, as needed.
+            productsTableAdapter1.Fill(finalDataSet1.Products);
             // TODO: This line of code loads data into the 'finalDataSet.Products' table. You can move, or remove it, as needed.
-            this.productsTableAdapter.Fill(this.finalDataSet.Products);
+            productsTableAdapter.Fill(finalDataSet.Products);
 
         }
 
@@ -43,7 +38,12 @@ namespace Final
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // TODO insert some dummy data
+            MessageBox.Show(productGridView.ToString());
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

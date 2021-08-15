@@ -1,21 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Final.Models;
+using System;
 using System.Windows.Forms;
-using Final.Models;
-using System.Security.Cryptography;
 
 namespace Final
 {
-    
+
     public partial class Login : Form
     {
-        private Boolean validate()
+        private bool validate()
         {
             if (txtUsername.Text == "")
             {
@@ -37,7 +29,7 @@ namespace Final
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
+            Owner.Show();
             Close();
         }
 
@@ -45,16 +37,16 @@ namespace Final
         {
             if (validate())
             {
-                using (var context = new DatabaseContext())
+                using (DatabaseContext context = new DatabaseContext())
                 {
-                
+
                     User user = User.VerifyLogin(txtUsername.Text, txtPassword.Text);
-                    if(user != null)
+                    if (user != null)
                     {
                         MessageBox.Show("Logged in");
                         Environment.SetEnvironmentVariable("Name", user.Username);
-                        this.Owner.Show();
-                        this.Close();
+                        Owner.Show();
+                        Close();
                     }
                     else
                     {
@@ -68,14 +60,24 @@ namespace Final
         {
             if (validate())
             {
-                using (var context = new DatabaseContext())
+                using (DatabaseContext context = new DatabaseContext())
                 {
                     string hashedPassword = User.HashPassword(txtPassword.Text);
                     User user = new User { Username = txtUsername.Text, Password = hashedPassword, };
-                    context.Users.Add(user);
-                    context.SaveChanges();
-                    // TODO handle errors
-                    MessageBox.Show("Saved");
+                    try
+                    {
+                        context.Users.Add(user);
+                        context.SaveChanges();
+                        MessageBox.Show("Saved");
+                    }
+                    catch (Microsoft.EntityFrameworkCore.DbUpdateException ex)
+                    {
+                        MessageBox.Show($"Error when trying to add a user. Username is taken\n\n{ex}");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Unexpected Error: {ex}");
+                    }
                 }
             }
         }

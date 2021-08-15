@@ -6,7 +6,7 @@ namespace Final.Models
     {
         public static string dbPath = @"DESKTOP-DUKMCM1\MSSQLSERVER02";
         public static string dbName = "Final";
-        private static string connectionString = $"Data Source={dbPath};Initial Catalog={dbName};Integrated Security=True";
+        private static readonly string connectionString = $"Data Source={dbPath};Initial Catalog={dbName};Integrated Security=True";
         public DbSet<BusinessType> BusinessTypes { get; set; }
         public DbSet<BusinessInformation> BusinessInformations { get; set; }
         public DbSet<BusinessIssue> BusinessIssues { get; set; }
@@ -25,6 +25,11 @@ namespace Final.Models
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
         {
             dbContextOptionsBuilder.UseSqlServer(connectionString);
+        }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<User>()
+                .HasIndex(u => u.Username).IsUnique();
         }
         // Console is in tools
         // Add-Migration {name}

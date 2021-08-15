@@ -173,6 +173,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FinalDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FinalDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forum.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +193,14 @@
     <Compile Include="Migrations\20210815062750_Standardize.cs" />
     <Compile Include="Migrations\20210815062750_Standardize.designer.cs">
       <DependentUpon>20210815062750_Standardize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210815210847_Int.cs" />
+    <Compile Include="Migrations\20210815210847_Int.designer.cs">
+      <DependentUpon>20210815210847_Int.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210815212419_unqiueUser.cs" />
+    <Compile Include="Migrations\20210815212419_unqiueUser.designer.cs">
+      <DependentUpon>20210815212419_unqiueUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Models\BusinessIssue.cs" />
@@ -254,6 +267,17 @@
     </None>
     <None Include="FinalDataSet.xss">
       <DependentUpon>FinalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet1.xsc">
+      <DependentUpon>FinalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet1.xss">
+      <DependentUpon>FinalDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

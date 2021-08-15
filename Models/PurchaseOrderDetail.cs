@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Final.Models
 {
@@ -12,6 +8,7 @@ namespace Final.Models
         public DateTime? CreatedAt { get; } = DateTime.Now;
         public virtual Product Product { get; set; }
         public int QuantityPurchased { get; set; }
+        public virtual PurchaseOrder PurchaseOrder { get; set; }
 
     }
 }

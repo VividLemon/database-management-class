@@ -32,6 +32,7 @@ namespace Final
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReturn = new System.Windows.Forms.Button();
+            this.btnAddContentMigration = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,15 +56,27 @@ namespace Final
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
+            // btnAddContentMigration
+            // 
+            this.btnAddContentMigration.Location = new System.Drawing.Point(713, 333);
+            this.btnAddContentMigration.Name = "btnAddContentMigration";
+            this.btnAddContentMigration.Size = new System.Drawing.Size(75, 23);
+            this.btnAddContentMigration.TabIndex = 5;
+            this.btnAddContentMigration.Text = "Add content";
+            this.btnAddContentMigration.UseVisualStyleBackColor = true;
+            this.btnAddContentMigration.Click += new System.EventHandler(this.btnAddContentMigration_Click);
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAddContentMigration);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Admin";
             this.Text = "Admin";
+            this.Load += new System.EventHandler(this.Admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -73,5 +86,6 @@ namespace Final
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.Button btnAddContentMigration;
     }
 }
