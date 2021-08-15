@@ -20,6 +20,7 @@ namespace Final.Models
         public DbSet<Vendor> Vendors { get; set; }
         public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
         public DbSet<PurchaseOrderDetail> PurchaseOrderDetails { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
         {

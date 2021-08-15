@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace Final.Models
 {
-    class BusinessIssue
+    class BusinessIssue : Model
     {
         public int Id { get; set; }
-        public DateTime? CreatedAt { get; set; } = DateTime.Now;
+        public DateTime? CreatedAt { get; } = DateTime.Now;
         public string Issue { get; set; }
         public virtual BusinessInformation Business { get; set; }
+
+        public BusinessIssue(int id, string issue, BusinessInformation business)
+        {
+            Id = id;
+            Issue = issue;
+            Business = business;
+        }
     }
 }

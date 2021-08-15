@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace Final
 {
-    public partial class Form1 : Form
+    public partial class Admin : Form
     {
-        public Form1()
+        public Admin()
         {
             InitializeComponent();
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            Close();
         }
     }
 }

@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace Final.Models
 {
-    class Invoice
+    class Invoice : Model
     {
         public int Id { get; set; }
-        public DateTime? CreatedAt { get; set; } = DateTime.Now;
+        public DateTime? CreatedAt { get; } = DateTime.Now;
         public virtual Customer customer { get; set; }
+
+        public Invoice(int id, Customer customer)
+        {
+            Id = id;
+            this.customer = customer;
+        }
     }
 }

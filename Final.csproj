@@ -162,17 +162,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\20210810190129_init.cs" />
-    <Compile Include="Migrations\20210810190129_init.designer.cs">
-      <DependentUpon>20210810190129_init.cs</DependentUpon>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\20210810190909_init2.cs" />
-    <Compile Include="Migrations\20210810190909_init2.designer.cs">
-      <DependentUpon>20210810190909_init2.cs</DependentUpon>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20210810215012_PurchaseOrders.cs" />
-    <Compile Include="Migrations\20210810215012_PurchaseOrders.designer.cs">
-      <DependentUpon>20210810215012_PurchaseOrders.cs</DependentUpon>
+    <Compile Include="Forum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forum.Designer.cs">
+      <DependentUpon>Forum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210815062750_Standardize.cs" />
+    <Compile Include="Migrations\20210815062750_Standardize.designer.cs">
+      <DependentUpon>20210815062750_Standardize.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Models\BusinessIssue.cs" />
@@ -185,18 +195,38 @@
     <Compile Include="Models\Forum.cs" />
     <Compile Include="Models\InvoiceDetail.cs" />
     <Compile Include="Models\Invoice.cs" />
+    <Compile Include="Models\Model.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\PurchaseOrder.cs" />
     <Compile Include="Models\PurchaseOrderDetail.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\Vendor.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Landing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Landing.Designer.cs">
+      <DependentUpon>Landing.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Store.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store.Designer.cs">
+      <DependentUpon>Store.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forum.resx">
+      <DependentUpon>Forum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Landing.resx">
+      <DependentUpon>Landing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -206,6 +236,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Store.resx">
+      <DependentUpon>Store.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -219,6 +252,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

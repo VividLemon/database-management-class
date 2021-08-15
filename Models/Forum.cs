@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace Final.Models
 {
-    class Forum
+    class Forum : Model
     {
         public int Id { get; set; }
-        public DateTime? CreatedAt { get; set; } = DateTime.Now;
+        public DateTime? CreatedAt { get; } = DateTime.Now;
         public string Name { get; set; }
+
+        public Forum(int id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
     }
 }
