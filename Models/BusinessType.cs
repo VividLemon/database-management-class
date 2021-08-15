@@ -12,10 +12,5 @@ namespace Final.Models
         public DateTime? CreatedAt { get; } = DateTime.Now;
         public string Type { get; set; }
 
-        public BusinessType(int id, string type)
-        {
-            Id = id;
-            Type = type;
-        }
     }
 }

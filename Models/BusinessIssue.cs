@@ -13,11 +13,5 @@ namespace Final.Models
         public string Issue { get; set; }
         public virtual BusinessInformation Business { get; set; }
 
-        public BusinessIssue(int id, string issue, BusinessInformation business)
-        {
-            Id = id;
-            Issue = issue;
-            Business = business;
-        }
     }
 }

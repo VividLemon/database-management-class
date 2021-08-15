@@ -14,12 +14,5 @@ namespace Final.Models
         public virtual Product product { get; set; }
         public int QuantityPurchased { get; set; }
 
-        public InvoiceDetail(int id, Invoice invoice, Product product, int quantityPurchased)
-        {
-            Id = id;
-            Invoice = invoice;
-            this.product = product;
-            QuantityPurchased = quantityPurchased;
-        }
     }
 }

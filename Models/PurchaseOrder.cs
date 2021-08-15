@@ -15,13 +15,5 @@ namespace Final.Models
         public decimal TotalPaid { get; set; }
         public virtual Vendor Vendor { get; set; }
 
-        public PurchaseOrder(int id, PurchaseOrderDetail purchaseOrderDetail, DateTime purchaseDate, decimal totalPaid, Vendor vendor)
-        {
-            Id = id;
-            PurchaseOrderDetail = purchaseOrderDetail;
-            PurchaseDate = purchaseDate;
-            TotalPaid = totalPaid;
-            Vendor = vendor;
-        }
     }
 }

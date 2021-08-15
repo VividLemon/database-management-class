@@ -15,15 +15,5 @@ namespace Final.Models
         public string State { get; set; }
         public string Zip { get; set; }
         public string PhoneNumber { get; set; }
-
-        public Vendor(int id, string name, string address, string state, string zip, string phoneNumber)
-        {
-            Id = id;
-            Name = name;
-            Address = address;
-            State = state;
-            Zip = zip;
-            PhoneNumber = phoneNumber;
-        }
     }
 }

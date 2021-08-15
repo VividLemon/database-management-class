@@ -11,11 +11,5 @@ namespace Final.Models
         public int Id { get; set; }
         public DateTime? CreatedAt { get; } = DateTime.Now;
         public virtual Customer customer { get; set; }
-
-        public Invoice(int id, Customer customer)
-        {
-            Id = id;
-            this.customer = customer;
-        }
     }
 }

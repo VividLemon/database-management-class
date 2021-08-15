@@ -11,11 +11,5 @@ namespace Final.Models
         public int Id { get; set; }
         public DateTime? CreatedAt { get; } = DateTime.Now;
         public string Name { get; set; }
-
-        public Forum(int id, string name)
-        {
-            Id = id;
-            Name = name;
-        }
     }
 }

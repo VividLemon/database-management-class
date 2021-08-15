@@ -13,7 +13,7 @@ namespace Final.Models
         {
             using (var context = new DatabaseContext())
             {
-                User user = context.Users.SingleOrDefault(u => u.username == username && u.password == HashPassword(password));
+                User user = context.Users.SingleOrDefault(u => u.Username == username && u.Password == HashPassword(password));
                 if (user != null)
                     return user;
                 return null;
@@ -36,14 +36,7 @@ namespace Final.Models
 
         public int Id { get; set; }
         public DateTime? CreatedAt { get; } = DateTime.Now;
-        public string username { get; set; }
-        public string password { get; set; }
-
-        public User(int id, string username, string password)
-        {
-            Id = id;
-            this.username = username;
-            this.password = password;
-        }
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

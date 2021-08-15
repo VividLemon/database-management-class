@@ -14,12 +14,5 @@ namespace Final.Models
         public decimal Latitude { get; set; }
         public virtual BusinessType Type { get; set; }
 
-        public BusinessInformation(int id, decimal longitute, decimal latitude, BusinessType type)
-        {
-            Id = id;
-            Longitute = longitute;
-            Latitude = latitude;
-            Type = type;
-        }
     }
 }

@@ -52,7 +52,7 @@ namespace Final
                     if(user != null)
                     {
                         MessageBox.Show("Logged in");
-                        Environment.SetEnvironmentVariable("Name", user.username);
+                        Environment.SetEnvironmentVariable("Name", user.Username);
                         this.Owner.Show();
                         this.Close();
                     }
@@ -71,7 +71,7 @@ namespace Final
                 using (var context = new DatabaseContext())
                 {
                     string hashedPassword = User.HashPassword(txtPassword.Text);
-                    User user = new User { username = txtUsername.Text, password = hashedPassword, };
+                    User user = new User { Username = txtUsername.Text, Password = hashedPassword, };
                     context.Users.Add(user);
                     context.SaveChanges();
                     // TODO handle errors

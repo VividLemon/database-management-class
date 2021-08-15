@@ -13,11 +13,5 @@ namespace Final.Models
         public virtual Product Product { get; set; }
         public int QuantityPurchased { get; set; }
 
-        public PurchaseOrderDetail(int id, Product product, int quantityPurchased)
-        {
-            Id = id;
-            Product = product;
-            QuantityPurchased = quantityPurchased;
-        }
     }
 }

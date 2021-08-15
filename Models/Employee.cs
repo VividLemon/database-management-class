@@ -18,16 +18,5 @@ namespace Final.Models
         public string Zip { get; set; }
         public decimal Salary { get; set; }
 
-        public Employee(int id, string name, DateTime dateOfBirth, string phoneNumber, string address, string state, string zip, decimal salary)
-        {
-            Id = id;
-            Name = name;
-            DateOfBirth = dateOfBirth;
-            PhoneNumber = phoneNumber;
-            Address = address;
-            State = state;
-            Zip = zip;
-            Salary = salary;
-        }
     }
 }

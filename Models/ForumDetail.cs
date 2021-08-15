@@ -14,12 +14,5 @@ namespace Final.Models
         public virtual Forum Forum { get; set; }
         public virtual Customer Customer { get; set; }
 
-        public ForumDetail(int id, string content, Forum forum, Customer customer)
-        {
-            Id = id;
-            Content = content;
-            Forum = forum;
-            Customer = customer;
-        }
     }
 }
