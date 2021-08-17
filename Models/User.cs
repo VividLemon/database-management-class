@@ -7,13 +7,56 @@ namespace Final.Models
 {
     class User : Model
     {
-        public static User VerifyLogin(string username, string password)
+        public static User VerifyLogin(string username, string password, bool prehashed = false)
         {
             using (DatabaseContext context = new DatabaseContext())
             {
-                User user = context.Users.SingleOrDefault(u => u.Username == username && u.Password == HashPassword(password));
-                if (user != null)
-                    return user;
+                try
+                {
+                    string pass = password;
+                    if (!prehashed)
+                        pass = HashPassword(pass);
+                    User user = context.Users.SingleOrDefault(u => u.Username == username && u.Password == pass);
+                    if (user != null)
+                    {
+                        if (user.CustomerId != null)
+                        {
+                            Customer customer = context.Customers.SingleOrDefault(c => c.Id == user.CustomerId);
+                            if (customer != null)
+                                user.Customer = customer;
+                        }
+                        return user;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                catch (Exception)
+                {
+                    throw new Exception();
+                }
+            }
+        }
+        public static Customer GetCustomerByUser(User user)
+        {
+            if (user.CustomerId != null)
+            {
+                using (DatabaseContext context = new DatabaseContext())
+                {
+                    try
+                    {
+                        Customer customer = context.Customers.Single(c => c.Id == user.CustomerId);
+                        return customer;
+                    }
+                    catch (Exception)
+                    {
+                        throw new Exception();
+                    }
+                }
+            }
+            else
+            {
                 return null;
             }
         }
@@ -37,5 +80,7 @@ namespace Final.Models
         public string Username { get; set; }
 
         public string Password { get; set; }
+        public int? CustomerId { get; set; }
+        public virtual Customer Customer { get; set; }
     }
 }

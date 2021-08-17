@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Final.Migrations
 {
-    public partial class init : Migration
+    public partial class RelatedIds : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -90,21 +90,6 @@ namespace Final.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Users",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CreatedAt = table.Column<DateTime>(nullable: true),
-                    Username = table.Column<string>(nullable: true),
-                    Password = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Users", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Vendors",
                 columns: table => new
                 {
@@ -131,17 +116,17 @@ namespace Final.Migrations
                     CreatedAt = table.Column<DateTime>(nullable: true),
                     Longitute = table.Column<decimal>(nullable: false),
                     Latitude = table.Column<decimal>(nullable: false),
-                    TypeId = table.Column<int>(nullable: true)
+                    BusinessTypeId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_BusinessInformations", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_BusinessInformations_BusinessTypes_TypeId",
-                        column: x => x.TypeId,
+                        name: "FK_BusinessInformations_BusinessTypes_BusinessTypeId",
+                        column: x => x.BusinessTypeId,
                         principalTable: "BusinessTypes",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -151,43 +136,37 @@ namespace Final.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CreatedAt = table.Column<DateTime>(nullable: true),
-                    customerId = table.Column<int>(nullable: true)
+                    CustomerId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Invoices", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Invoices_Customers_customerId",
-                        column: x => x.customerId,
+                        name: "FK_Invoices_Customers_CustomerId",
+                        column: x => x.CustomerId,
                         principalTable: "Customers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ForumDetails",
+                name: "Users",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CreatedAt = table.Column<DateTime>(nullable: true),
-                    Content = table.Column<string>(nullable: true),
-                    ForumId = table.Column<int>(nullable: true),
+                    Username = table.Column<string>(nullable: true),
+                    Password = table.Column<string>(nullable: true),
                     CustomerId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ForumDetails", x => x.Id);
+                    table.PrimaryKey("PK_Users", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ForumDetails_Customers_CustomerId",
+                        name: "FK_Users_Customers_CustomerId",
                         column: x => x.CustomerId,
                         principalTable: "Customers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_ForumDetails_Forums_ForumId",
-                        column: x => x.ForumId,
-                        principalTable: "Forums",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -201,7 +180,7 @@ namespace Final.Migrations
                     CreatedAt = table.Column<DateTime>(nullable: true),
                     PurchaseDate = table.Column<DateTime>(nullable: false),
                     TotalPaid = table.Column<decimal>(nullable: false),
-                    VendorId = table.Column<int>(nullable: true)
+                    VendorId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -211,7 +190,7 @@ namespace Final.Migrations
                         column: x => x.VendorId,
                         principalTable: "Vendors",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -222,17 +201,17 @@ namespace Final.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CreatedAt = table.Column<DateTime>(nullable: true),
                     Issue = table.Column<string>(nullable: true),
-                    BusinessId = table.Column<int>(nullable: true)
+                    BusinessInformationId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_BusinessIssues", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_BusinessIssues_BusinessInformations_BusinessId",
-                        column: x => x.BusinessId,
+                        name: "FK_BusinessIssues_BusinessInformations_BusinessInformationId",
+                        column: x => x.BusinessInformationId,
                         principalTable: "BusinessInformations",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -242,8 +221,8 @@ namespace Final.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CreatedAt = table.Column<DateTime>(nullable: true),
-                    InvoiceId = table.Column<int>(nullable: true),
-                    productId = table.Column<int>(nullable: true),
+                    InvoiceId = table.Column<int>(nullable: false),
+                    ProductId = table.Column<int>(nullable: false),
                     QuantityPurchased = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -254,13 +233,41 @@ namespace Final.Migrations
                         column: x => x.InvoiceId,
                         principalTable: "Invoices",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_InvoiceDetails_Products_productId",
-                        column: x => x.productId,
+                        name: "FK_InvoiceDetails_Products_ProductId",
+                        column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ForumDetails",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedAt = table.Column<DateTime>(nullable: true),
+                    Content = table.Column<string>(nullable: true),
+                    ForumId = table.Column<int>(nullable: false),
+                    Userid = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ForumDetails", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ForumDetails_Forums_ForumId",
+                        column: x => x.ForumId,
+                        principalTable: "Forums",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ForumDetails_Users_Userid",
+                        column: x => x.Userid,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -272,7 +279,7 @@ namespace Final.Migrations
                     CreatedAt = table.Column<DateTime>(nullable: true),
                     ProductId = table.Column<int>(nullable: true),
                     QuantityPurchased = table.Column<int>(nullable: false),
-                    PurchaseOrderId = table.Column<int>(nullable: true)
+                    PurchaseOrderId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -288,23 +295,18 @@ namespace Final.Migrations
                         column: x => x.PurchaseOrderId,
                         principalTable: "PurchaseOrders",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_BusinessInformations_TypeId",
+                name: "IX_BusinessInformations_BusinessTypeId",
                 table: "BusinessInformations",
-                column: "TypeId");
+                column: "BusinessTypeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BusinessIssues_BusinessId",
+                name: "IX_BusinessIssues_BusinessInformationId",
                 table: "BusinessIssues",
-                column: "BusinessId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ForumDetails_CustomerId",
-                table: "ForumDetails",
-                column: "CustomerId");
+                column: "BusinessInformationId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ForumDetails_ForumId",
@@ -312,19 +314,24 @@ namespace Final.Migrations
                 column: "ForumId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ForumDetails_Userid",
+                table: "ForumDetails",
+                column: "Userid");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_InvoiceDetails_InvoiceId",
                 table: "InvoiceDetails",
                 column: "InvoiceId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_InvoiceDetails_productId",
+                name: "IX_InvoiceDetails_ProductId",
                 table: "InvoiceDetails",
-                column: "productId");
+                column: "ProductId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Invoices_customerId",
+                name: "IX_Invoices_CustomerId",
                 table: "Invoices",
-                column: "customerId");
+                column: "CustomerId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PurchaseOrderDetails_ProductId",
@@ -340,6 +347,13 @@ namespace Final.Migrations
                 name: "IX_PurchaseOrders_VendorId",
                 table: "PurchaseOrders",
                 column: "VendorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_CustomerId",
+                table: "Users",
+                column: "CustomerId",
+                unique: true,
+                filter: "[CustomerId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Users_Username",
@@ -367,13 +381,13 @@ namespace Final.Migrations
                 name: "PurchaseOrderDetails");
 
             migrationBuilder.DropTable(
-                name: "Users");
-
-            migrationBuilder.DropTable(
                 name: "BusinessInformations");
 
             migrationBuilder.DropTable(
                 name: "Forums");
+
+            migrationBuilder.DropTable(
+                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Invoices");

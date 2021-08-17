@@ -10,14 +10,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Final.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20210815224420_init")]
-    partial class init
+    [Migration("20210817032556_RelatedIds")]
+    partial class RelatedIds
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.17")
+                .HasAnnotation("ProductVersion", "3.1.18")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -28,6 +28,9 @@ namespace Final.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("BusinessTypeId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -37,12 +40,9 @@ namespace Final.Migrations
                     b.Property<decimal>("Longitute")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int?>("TypeId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("TypeId");
+                    b.HasIndex("BusinessTypeId");
 
                     b.ToTable("BusinessInformations");
                 });
@@ -54,7 +54,7 @@ namespace Final.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("BusinessId")
+                    b.Property<int>("BusinessInformationId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("CreatedAt")
@@ -65,7 +65,7 @@ namespace Final.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BusinessId");
+                    b.HasIndex("BusinessInformationId");
 
                     b.ToTable("BusinessIssues");
                 });
@@ -185,17 +185,17 @@ namespace Final.Migrations
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("CustomerId")
+                    b.Property<int>("ForumId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ForumId")
+                    b.Property<int>("Userid")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CustomerId");
-
                     b.HasIndex("ForumId");
+
+                    b.HasIndex("Userid");
 
                     b.ToTable("ForumDetails");
                 });
@@ -210,12 +210,12 @@ namespace Final.Migrations
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("customerId")
+                    b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("customerId");
+                    b.HasIndex("CustomerId");
 
                     b.ToTable("Invoices");
                 });
@@ -230,20 +230,20 @@ namespace Final.Migrations
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("InvoiceId")
+                    b.Property<int>("InvoiceId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<int>("QuantityPurchased")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("productId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("InvoiceId");
 
-                    b.HasIndex("productId");
+                    b.HasIndex("ProductId");
 
                     b.ToTable("InvoiceDetails");
                 });
@@ -288,7 +288,7 @@ namespace Final.Migrations
                     b.Property<decimal>("TotalPaid")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int?>("VendorId")
+                    b.Property<int>("VendorId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -311,7 +311,7 @@ namespace Final.Migrations
                     b.Property<int?>("ProductId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PurchaseOrderId")
+                    b.Property<int>("PurchaseOrderId")
                         .HasColumnType("int");
 
                     b.Property<int>("QuantityPurchased")
@@ -336,6 +336,9 @@ namespace Final.Migrations
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("CustomerId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
@@ -343,6 +346,10 @@ namespace Final.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CustomerId")
+                        .IsUnique()
+                        .HasFilter("[CustomerId] IS NOT NULL");
 
                     b.HasIndex("Username")
                         .IsUnique()
@@ -385,50 +392,66 @@ namespace Final.Migrations
                 {
                     b.HasOne("Final.Models.BusinessType", "Type")
                         .WithMany()
-                        .HasForeignKey("TypeId");
+                        .HasForeignKey("BusinessTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Final.Models.BusinessIssue", b =>
                 {
                     b.HasOne("Final.Models.BusinessInformation", "Business")
                         .WithMany()
-                        .HasForeignKey("BusinessId");
+                        .HasForeignKey("BusinessInformationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Final.Models.ForumDetail", b =>
                 {
-                    b.HasOne("Final.Models.Customer", "Customer")
-                        .WithMany()
-                        .HasForeignKey("CustomerId");
-
                     b.HasOne("Final.Models.Forum", "Forum")
                         .WithMany()
-                        .HasForeignKey("ForumId");
+                        .HasForeignKey("ForumId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Final.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("Userid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Final.Models.Invoice", b =>
                 {
                     b.HasOne("Final.Models.Customer", "customer")
                         .WithMany()
-                        .HasForeignKey("customerId");
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Final.Models.InvoiceDetail", b =>
                 {
                     b.HasOne("Final.Models.Invoice", "Invoice")
                         .WithMany()
-                        .HasForeignKey("InvoiceId");
+                        .HasForeignKey("InvoiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Final.Models.Product", "product")
                         .WithMany()
-                        .HasForeignKey("productId");
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Final.Models.PurchaseOrder", b =>
                 {
                     b.HasOne("Final.Models.Vendor", "Vendor")
                         .WithMany()
-                        .HasForeignKey("VendorId");
+                        .HasForeignKey("VendorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Final.Models.PurchaseOrderDetail", b =>
@@ -439,7 +462,16 @@ namespace Final.Migrations
 
                     b.HasOne("Final.Models.PurchaseOrder", "PurchaseOrder")
                         .WithMany()
-                        .HasForeignKey("PurchaseOrderId");
+                        .HasForeignKey("PurchaseOrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Final.Models.User", b =>
+                {
+                    b.HasOne("Final.Models.Customer", "Customer")
+                        .WithOne("User")
+                        .HasForeignKey("Final.Models.User", "CustomerId");
                 });
 #pragma warning restore 612, 618
         }

@@ -21,7 +21,6 @@ namespace Final.Models
         public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
         public DbSet<PurchaseOrderDetail> PurchaseOrderDetails { get; set; }
         public DbSet<User> Users { get; set; }
-
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
         {
             dbContextOptionsBuilder.UseSqlServer(connectionString);
@@ -31,6 +30,7 @@ namespace Final.Models
             builder.Entity<User>()
                 .HasIndex(u => u.Username).IsUnique();
         }
+
         // Console is in tools
         // Add-Migration {name}
         // Update-Database

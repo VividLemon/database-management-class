@@ -6,6 +6,7 @@ namespace Final.Models
     {
         public int Id { get; set; }
         public DateTime? CreatedAt { get; set; } = DateTime.Now;
+        public int CustomerId { get; set; }
         public virtual Customer customer { get; set; }
     }
 }

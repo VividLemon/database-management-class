@@ -45,6 +45,15 @@ namespace Final
                     {
                         MessageBox.Show("Logged in");
                         Environment.SetEnvironmentVariable("Name", user.Username);
+                        Environment.SetEnvironmentVariable("Password", user.Password);
+                        if (user.CustomerId == null)
+                        {
+                            Environment.SetEnvironmentVariable("Admin", "True");
+                        }
+                        else
+                        {
+                            Environment.SetEnvironmentVariable("Admin", "False");
+                        }
                         Owner.Show();
                         Close();
                     }
@@ -72,7 +81,7 @@ namespace Final
                     }
                     catch (Microsoft.EntityFrameworkCore.DbUpdateException ex)
                     {
-                        MessageBox.Show($"Error when trying to add a user. Username is taken\n\n{ex}");
+                        MessageBox.Show($"Error when trying to add a user\n\n{ex}");
                     }
                     catch (Exception ex)
                     {
@@ -80,6 +89,11 @@ namespace Final
                     }
                 }
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,6 +8,7 @@ namespace Final.Models
         public DateTime? CreatedAt { get; set; } = DateTime.Now;
         public virtual Product Product { get; set; }
         public int QuantityPurchased { get; set; }
+        public int PurchaseOrderId { get; set; }
         public virtual PurchaseOrder PurchaseOrder { get; set; }
 
     }

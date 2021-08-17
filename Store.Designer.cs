@@ -41,23 +41,23 @@ namespace Final
             this.productsTableAdapter1 = new Final.FinalDataSet1TableAdapters.ProductsTableAdapter();
             this.finalDataSet = new Final.FinalDataSet();
             this.finalDataSet1 = new Final.FinalDataSet1();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.finalDataSet2 = new Final.FinalDataSet2();
-            this.productsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.productsTableAdapter2 = new Final.FinalDataSet2TableAdapters.ProductsTableAdapter();
+            this.gridViewProducts = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnViewProductGo = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.productsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.finalDataSet2 = new Final.FinalDataSet2();
+            this.productsTableAdapter2 = new Final.FinalDataSet2TableAdapters.ProductsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finalDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -93,6 +93,7 @@ namespace Final
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(226, 46);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(320, 97);
             this.richTextBox1.TabIndex = 5;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
@@ -125,35 +126,22 @@ namespace Final
             this.finalDataSet1.DataSetName = "FinalDataSet1";
             this.finalDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataGridView1
+            // gridViewProducts
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridViewProducts.AutoGenerateColumns = false;
+            this.gridViewProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn,
             this.btnViewProductGo});
-            this.dataGridView1.DataSource = this.productsBindingSource2;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 149);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(453, 289);
-            this.dataGridView1.TabIndex = 7;
-            // 
-            // finalDataSet2
-            // 
-            this.finalDataSet2.DataSetName = "FinalDataSet2";
-            this.finalDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productsBindingSource2
-            // 
-            this.productsBindingSource2.DataMember = "Products";
-            this.productsBindingSource2.DataSource = this.finalDataSet2;
-            // 
-            // productsTableAdapter2
-            // 
-            this.productsTableAdapter2.ClearBeforeFill = true;
+            this.gridViewProducts.DataSource = this.productsBindingSource2;
+            this.gridViewProducts.Location = new System.Drawing.Point(12, 149);
+            this.gridViewProducts.Name = "gridViewProducts";
+            this.gridViewProducts.Size = new System.Drawing.Size(453, 289);
+            this.gridViewProducts.TabIndex = 7;
+            this.gridViewProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productGridView_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -186,12 +174,26 @@ namespace Final
             this.btnViewProductGo.HeaderText = "View";
             this.btnViewProductGo.Name = "btnViewProductGo";
             // 
+            // productsBindingSource2
+            // 
+            this.productsBindingSource2.DataMember = "Products";
+            this.productsBindingSource2.DataSource = this.finalDataSet2;
+            // 
+            // finalDataSet2
+            // 
+            this.finalDataSet2.DataSetName = "FinalDataSet2";
+            this.finalDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productsTableAdapter2
+            // 
+            this.productsTableAdapter2.ClearBeforeFill = true;
+            // 
             // Store
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridViewProducts);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnReturn);
@@ -204,9 +206,9 @@ namespace Final
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finalDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,7 +226,7 @@ namespace Final
         private FinalDataSet1TableAdapters.ProductsTableAdapter productsTableAdapter1;
         private FinalDataSet finalDataSet;
         private FinalDataSet1 finalDataSet1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridViewProducts;
         private FinalDataSet2 finalDataSet2;
         private System.Windows.Forms.BindingSource productsBindingSource2;
         private FinalDataSet2TableAdapters.ProductsTableAdapter productsTableAdapter2;

@@ -48,10 +48,16 @@ namespace Final
 
         private void Landing_Load(object sender, EventArgs e)
         {
-            if (Environment.GetEnvironmentVariable("Name") != null)
+            if (Environment.GetEnvironmentVariable("Admin") != null && bool.Parse(Environment.GetEnvironmentVariable("Admin")) == true)
             {
                 btnAdminGo.Visible = true;
             }
+            // TODO list
+            /*
+             * Storeproduct needs to create a purchase order. Just for fake testing stuffs. 
+             * Forum needs to be functional with the ability to have logged in users add
+             * All models need to be updatable or insertable in the admin menu.
+             */
         }
     }
 }
