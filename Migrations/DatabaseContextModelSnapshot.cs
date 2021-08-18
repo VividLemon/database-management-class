@@ -186,14 +186,14 @@ namespace Final.Migrations
                     b.Property<int>("ForumId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Userid")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ForumId");
 
-                    b.HasIndex("Userid");
+                    b.HasIndex("UserId");
 
                     b.ToTable("ForumDetails");
                 });
@@ -414,7 +414,7 @@ namespace Final.Migrations
 
                     b.HasOne("Final.Models.User", "User")
                         .WithMany()
-                        .HasForeignKey("Userid")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

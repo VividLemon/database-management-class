@@ -77,7 +77,7 @@ namespace Final
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Forum";
-            this.Text = "Forum";
+            this.Text = "gi";
             this.Load += new System.EventHandler(this.Forum_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalDataSet1)).EndInit();

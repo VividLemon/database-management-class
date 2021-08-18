@@ -22,5 +22,10 @@ namespace Final
             // Content could be same variable, but on tab switch, it empties it then repopulates. 
             // If nothing found, visibility = false, display nothing found.
         }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

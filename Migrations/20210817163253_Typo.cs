@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Final.Migrations
 {
-    public partial class RelatedIds : Migration
+    public partial class Typo : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -251,7 +251,7 @@ namespace Final.Migrations
                     CreatedAt = table.Column<DateTime>(nullable: true),
                     Content = table.Column<string>(nullable: true),
                     ForumId = table.Column<int>(nullable: false),
-                    Userid = table.Column<int>(nullable: false)
+                    UserId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -263,8 +263,8 @@ namespace Final.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ForumDetails_Users_Userid",
-                        column: x => x.Userid,
+                        name: "FK_ForumDetails_Users_UserId",
+                        column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -314,9 +314,9 @@ namespace Final.Migrations
                 column: "ForumId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ForumDetails_Userid",
+                name: "IX_ForumDetails_UserId",
                 table: "ForumDetails",
-                column: "Userid");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_InvoiceDetails_InvoiceId",

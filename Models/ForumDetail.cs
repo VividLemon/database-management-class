@@ -9,7 +9,7 @@ namespace Final.Models
         public string Content { get; set; }
         public int ForumId { get; set; }
         public virtual Forum Forum { get; set; }
-        public int Userid { get; set; }
+        public int UserId { get; set; }
         public virtual User User { get; set; }
 
     }

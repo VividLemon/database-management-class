@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Final.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20210817032556_RelatedIds")]
-    partial class RelatedIds
+    [Migration("20210817163253_Typo")]
+    partial class Typo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -188,14 +188,14 @@ namespace Final.Migrations
                     b.Property<int>("ForumId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Userid")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ForumId");
 
-                    b.HasIndex("Userid");
+                    b.HasIndex("UserId");
 
                     b.ToTable("ForumDetails");
                 });
@@ -416,7 +416,7 @@ namespace Final.Migrations
 
                     b.HasOne("Final.Models.User", "User")
                         .WithMany()
-                        .HasForeignKey("Userid")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

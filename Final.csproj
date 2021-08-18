@@ -185,10 +185,85 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FinalDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FinalDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet17.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FinalDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FinalDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet9.xsd</DependentUpon>
     </Compile>
     <Compile Include="Forum.cs">
       <SubType>Form</SubType>
@@ -202,9 +277,9 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20210817032556_RelatedIds.cs" />
-    <Compile Include="Migrations\20210817032556_RelatedIds.designer.cs">
-      <DependentUpon>20210817032556_RelatedIds.cs</DependentUpon>
+    <Compile Include="Migrations\20210817163253_Typo.cs" />
+    <Compile Include="Migrations\20210817163253_Typo.designer.cs">
+      <DependentUpon>20210817163253_Typo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Models\BusinessIssue.cs" />
@@ -292,6 +367,94 @@
     <None Include="FinalDataSet1.xss">
       <DependentUpon>FinalDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="FinalDataSet10.xsc">
+      <DependentUpon>FinalDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet10.xss">
+      <DependentUpon>FinalDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet11.xsc">
+      <DependentUpon>FinalDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet11.xss">
+      <DependentUpon>FinalDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet12.xsc">
+      <DependentUpon>FinalDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet12.xss">
+      <DependentUpon>FinalDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet13.xsc">
+      <DependentUpon>FinalDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet13.xss">
+      <DependentUpon>FinalDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet14.xsc">
+      <DependentUpon>FinalDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet14.xss">
+      <DependentUpon>FinalDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet15.xsc">
+      <DependentUpon>FinalDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet15.xss">
+      <DependentUpon>FinalDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet16.xsc">
+      <DependentUpon>FinalDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet16.xss">
+      <DependentUpon>FinalDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet17.xsc">
+      <DependentUpon>FinalDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet17.xss">
+      <DependentUpon>FinalDataSet17.xsd</DependentUpon>
+    </None>
     <None Include="FinalDataSet2.xsc">
       <DependentUpon>FinalDataSet2.xsd</DependentUpon>
     </None>
@@ -302,6 +465,83 @@
     </None>
     <None Include="FinalDataSet2.xss">
       <DependentUpon>FinalDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet3.xsc">
+      <DependentUpon>FinalDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet3.xss">
+      <DependentUpon>FinalDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet4.xsc">
+      <DependentUpon>FinalDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet4.xss">
+      <DependentUpon>FinalDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet5.xsc">
+      <DependentUpon>FinalDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet5.xss">
+      <DependentUpon>FinalDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet6.xsc">
+      <DependentUpon>FinalDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet6.xss">
+      <DependentUpon>FinalDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet7.xsc">
+      <DependentUpon>FinalDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet7.xss">
+      <DependentUpon>FinalDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet8.xsc">
+      <DependentUpon>FinalDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet8.xss">
+      <DependentUpon>FinalDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet9.xsc">
+      <DependentUpon>FinalDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet9.xss">
+      <DependentUpon>FinalDataSet9.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
