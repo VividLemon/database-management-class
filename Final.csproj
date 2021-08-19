@@ -323,6 +323,90 @@
     <Compile Include="Landing.Designer.cs">
       <DependentUpon>Landing.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewFolder1\BusinessInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\BusinessInformation.Designer.cs">
+      <DependentUpon>BusinessInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\BusinessIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\BusinessIssue.Designer.cs">
+      <DependentUpon>BusinessIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\BusinessType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\BusinessType.Designer.cs">
+      <DependentUpon>BusinessType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\ForumA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\ForumA.Designer.cs">
+      <DependentUpon>ForumA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\ForumDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\ForumDetail.Designer.cs">
+      <DependentUpon>ForumDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\InvoiceDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\InvoiceDetail.Designer.cs">
+      <DependentUpon>InvoiceDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\PurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\PurchaseOrder.Designer.cs">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\PurchaseOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\PurchaseOrderDetail.Designer.cs">
+      <DependentUpon>PurchaseOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Vendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Vendor.Designer.cs">
+      <DependentUpon>Vendor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Store.cs">
@@ -351,6 +435,48 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\BusinessInformation.resx">
+      <DependentUpon>BusinessInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\BusinessIssue.resx">
+      <DependentUpon>BusinessIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\BusinessType.resx">
+      <DependentUpon>BusinessType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\ForumA.resx">
+      <DependentUpon>ForumA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\ForumDetail.resx">
+      <DependentUpon>ForumDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\InvoiceDetail.resx">
+      <DependentUpon>InvoiceDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\PurchaseOrder.resx">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\PurchaseOrderDetail.resx">
+      <DependentUpon>PurchaseOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Vendor.resx">
+      <DependentUpon>Vendor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
