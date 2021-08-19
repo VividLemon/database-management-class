@@ -116,5 +116,55 @@ namespace Final.NewFolder1
             }
 
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Owner.Show();
+            Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int id;
+            if (txtDelete.Text == "")
+            {
+                MessageBox.Show("Cannot delete with no id");
+            }
+            else if (!int.TryParse(txtDelete.Text, out id))
+            {
+                MessageBox.Show("Value needs to be a number");
+            }
+            else
+            {
+                using (DatabaseContext context = new DatabaseContext())
+                {
+                    try
+                    {
+                        Models.BusinessInformation businessInfo = context.BusinessInformations.Single(c => c.Id == id);
+                        if (businessInfo != null)
+                            context.BusinessInformations.Remove(businessInfo);
+                        int result = context.SaveChanges();
+                        if (result > 0)
+                        {
+                            MessageBox.Show($"Successfully deleted {result} item");
+                            BusinessInformation_Load(sender, e);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failure, not deleted");
+                            BusinessInformation_Load(sender, e);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Unexpected error occured. Try again\n\n{ex}");
+                    }
+                    finally
+                    {
+                        txtDelete.Text = "";
+                    }
+                }
+            }
+        }
     }
 }

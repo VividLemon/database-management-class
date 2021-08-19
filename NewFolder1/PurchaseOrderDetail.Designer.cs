@@ -34,15 +34,17 @@ namespace Final.NewFolder1
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReturn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnSaveInfo = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.purchaseOrderDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.finalDataSetpod = new Final.FinalDataSetpod();
+            this.purchaseOrderDetailsTableAdapter = new Final.FinalDataSetpodTableAdapters.PurchaseOrderDetailsTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityPurchasedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchaseOrderIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purchaseOrderDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.finalDataSetpod = new Final.FinalDataSetpod();
-            this.purchaseOrderDetailsTableAdapter = new Final.FinalDataSetpodTableAdapters.PurchaseOrderDetailsTableAdapter();
+            this.btnSaveInfo = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.txtDelete = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseOrderDetailsBindingSource)).BeginInit();
@@ -67,18 +69,19 @@ namespace Final.NewFolder1
             this.btnReturn.TabIndex = 4;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.btnSaveInfo,
             this.idDataGridViewTextBoxColumn,
             this.createdAtDataGridViewTextBoxColumn,
             this.productIdDataGridViewTextBoxColumn,
             this.quantityPurchasedDataGridViewTextBoxColumn,
-            this.purchaseOrderIdDataGridViewTextBoxColumn});
+            this.purchaseOrderIdDataGridViewTextBoxColumn,
+            this.btnSaveInfo});
             this.dataGridView1.DataSource = this.purchaseOrderDetailsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 106);
             this.dataGridView1.Name = "dataGridView1";
@@ -86,10 +89,19 @@ namespace Final.NewFolder1
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // btnSaveInfo
+            // purchaseOrderDetailsBindingSource
             // 
-            this.btnSaveInfo.HeaderText = "Save";
-            this.btnSaveInfo.Name = "btnSaveInfo";
+            this.purchaseOrderDetailsBindingSource.DataMember = "PurchaseOrderDetails";
+            this.purchaseOrderDetailsBindingSource.DataSource = this.finalDataSetpod;
+            // 
+            // finalDataSetpod
+            // 
+            this.finalDataSetpod.DataSetName = "FinalDataSetpod";
+            this.finalDataSetpod.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // purchaseOrderDetailsTableAdapter
+            // 
+            this.purchaseOrderDetailsTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -122,25 +134,35 @@ namespace Final.NewFolder1
             this.purchaseOrderIdDataGridViewTextBoxColumn.HeaderText = "PurchaseOrderId";
             this.purchaseOrderIdDataGridViewTextBoxColumn.Name = "purchaseOrderIdDataGridViewTextBoxColumn";
             // 
-            // purchaseOrderDetailsBindingSource
+            // btnSaveInfo
             // 
-            this.purchaseOrderDetailsBindingSource.DataMember = "PurchaseOrderDetails";
-            this.purchaseOrderDetailsBindingSource.DataSource = this.finalDataSetpod;
+            this.btnSaveInfo.HeaderText = "Save";
+            this.btnSaveInfo.Name = "btnSaveInfo";
             // 
-            // finalDataSetpod
+            // btnDelete
             // 
-            this.finalDataSetpod.DataSetName = "FinalDataSetpod";
-            this.finalDataSetpod.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btnDelete.Location = new System.Drawing.Point(713, 386);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 9;
+            this.btnDelete.Text = "Delete By Id";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // purchaseOrderDetailsTableAdapter
+            // txtDelete
             // 
-            this.purchaseOrderDetailsTableAdapter.ClearBeforeFill = true;
+            this.txtDelete.Location = new System.Drawing.Point(713, 360);
+            this.txtDelete.Name = "txtDelete";
+            this.txtDelete.Size = new System.Drawing.Size(74, 20);
+            this.txtDelete.TabIndex = 10;
             // 
             // PurchaseOrderDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtDelete);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.pictureBox1);
@@ -152,6 +174,7 @@ namespace Final.NewFolder1
             ((System.ComponentModel.ISupportInitialize)(this.purchaseOrderDetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalDataSetpod)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -160,7 +183,6 @@ namespace Final.NewFolder1
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSaveInfo;
         private FinalDataSetpod finalDataSetpod;
         private System.Windows.Forms.BindingSource purchaseOrderDetailsBindingSource;
         private FinalDataSetpodTableAdapters.PurchaseOrderDetailsTableAdapter purchaseOrderDetailsTableAdapter;
@@ -169,5 +191,8 @@ namespace Final.NewFolder1
         private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityPurchasedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn purchaseOrderIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn btnSaveInfo;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.TextBox txtDelete;
     }
 }

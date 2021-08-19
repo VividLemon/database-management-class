@@ -34,7 +34,6 @@ namespace Final.NewFolder1
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReturn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnSaveInfo = new System.Windows.Forms.DataGridViewButtonColumn();
             this.finalDataSetbiii = new Final.FinalDataSetbiii();
             this.businessInformationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.businessInformationsTableAdapter = new Final.FinalDataSetbiiiTableAdapters.BusinessInformationsTableAdapter();
@@ -43,6 +42,9 @@ namespace Final.NewFolder1
             this.longituteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.latitudeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.businessTypeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveInfo = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.txtDelete = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalDataSetbiii)).BeginInit();
@@ -67,29 +69,25 @@ namespace Final.NewFolder1
             this.btnReturn.TabIndex = 4;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.btnSaveInfo,
             this.idDataGridViewTextBoxColumn,
             this.createdAtDataGridViewTextBoxColumn,
             this.longituteDataGridViewTextBoxColumn,
             this.latitudeDataGridViewTextBoxColumn,
-            this.businessTypeIdDataGridViewTextBoxColumn});
+            this.businessTypeIdDataGridViewTextBoxColumn,
+            this.btnSaveInfo});
             this.dataGridView1.DataSource = this.businessInformationsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 93);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(695, 332);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // btnSaveInfo
-            // 
-            this.btnSaveInfo.HeaderText = "Save";
-            this.btnSaveInfo.Name = "btnSaveInfo";
             // 
             // finalDataSetbiii
             // 
@@ -136,11 +134,35 @@ namespace Final.NewFolder1
             this.businessTypeIdDataGridViewTextBoxColumn.HeaderText = "BusinessTypeId";
             this.businessTypeIdDataGridViewTextBoxColumn.Name = "businessTypeIdDataGridViewTextBoxColumn";
             // 
+            // btnSaveInfo
+            // 
+            this.btnSaveInfo.HeaderText = "Save";
+            this.btnSaveInfo.Name = "btnSaveInfo";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(713, 386);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 9;
+            this.btnDelete.Text = "Delete By Id";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // txtDelete
+            // 
+            this.txtDelete.Location = new System.Drawing.Point(713, 360);
+            this.txtDelete.Name = "txtDelete";
+            this.txtDelete.Size = new System.Drawing.Size(74, 20);
+            this.txtDelete.TabIndex = 10;
+            // 
             // BusinessInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtDelete);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.pictureBox1);
@@ -152,6 +174,7 @@ namespace Final.NewFolder1
             ((System.ComponentModel.ISupportInitialize)(this.finalDataSetbiii)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.businessInformationsBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -160,7 +183,6 @@ namespace Final.NewFolder1
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSaveInfo;
         private FinalDataSetbiii finalDataSetbiii;
         private System.Windows.Forms.BindingSource businessInformationsBindingSource;
         private FinalDataSetbiiiTableAdapters.BusinessInformationsTableAdapter businessInformationsTableAdapter;
@@ -169,5 +191,8 @@ namespace Final.NewFolder1
         private System.Windows.Forms.DataGridViewTextBoxColumn longituteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn latitudeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn businessTypeIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn btnSaveInfo;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.TextBox txtDelete;
     }
 }

@@ -22,6 +22,17 @@ namespace Final.NewFolder1
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Owner.Show();
+            Close();
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
             DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
             int id = (int)row.Cells[0].Value;
             int customerId = (int)row.Cells[2].Value;
@@ -92,6 +103,50 @@ namespace Final.NewFolder1
                 }
             }
 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int id;
+            if (txtDelete.Text == "")
+            {
+                MessageBox.Show("Cannot delete with no id");
+            }
+            else if (!int.TryParse(txtDelete.Text, out id))
+            {
+                MessageBox.Show("Value needs to be a number");
+            }
+            else
+            {
+                using (DatabaseContext context = new DatabaseContext())
+                {
+                    try
+                    {
+                        Models.Invoice invoice = context.Invoices.Single(c => c.Id == id);
+                        if (invoice != null)
+                            context.Invoices.Remove(invoice);
+                        int result = context.SaveChanges();
+                        if (result > 0)
+                        {
+                            MessageBox.Show($"Successfully deleted {result} item");
+                            Invoice_Load(sender, e);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failure, not deleted");
+                            Invoice_Load(sender, e);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Unexpected error occured. Try again\n\n{ex}");
+                    }
+                    finally
+                    {
+                        txtDelete.Text = "";
+                    }
+                }
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Final.Models;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Final.NewFolder1
@@ -84,6 +85,56 @@ namespace Final.NewFolder1
                 }
             }
 
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Owner.Show();
+            Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int id;
+            if (txtDelete.Text == "")
+            {
+                MessageBox.Show("Cannot delete with no id");
+            }
+            else if (!int.TryParse(txtDelete.Text, out id))
+            {
+                MessageBox.Show("Value needs to be a number");
+            }
+            else
+            {
+                using (DatabaseContext context = new DatabaseContext())
+                {
+                    try
+                    {
+                        Models.Forum forum = context.Forums.Single(c => c.Id == id);
+                        if (forum != null)
+                            context.Forums.Remove(forum);
+                        int result = context.SaveChanges();
+                        if (result > 0)
+                        {
+                            MessageBox.Show($"Successfully deleted {result} item");
+                            ForumA_Load(sender, e);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failure, not deleted");
+                            ForumA_Load(sender, e);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Unexpected error occured. Try again\n\n{ex}");
+                    }
+                    finally
+                    {
+                        txtDelete.Text = "";
+                    }
+                }
+            }
         }
     }
 }
