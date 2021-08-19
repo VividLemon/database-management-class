@@ -82,6 +82,7 @@ namespace Final
             // 
             this.txtPassword.Location = new System.Drawing.Point(12, 168);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(155, 20);
             this.txtPassword.TabIndex = 2;
             // 

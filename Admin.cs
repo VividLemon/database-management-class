@@ -1379,5 +1379,48 @@ namespace Final
                 }
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteById_Click(object sender, EventArgs e)
+        {
+            int id;
+            if (txtDeleteId.Text == "")
+            {
+                MessageBox.Show("Cannot delete if you don't put an id in the box");
+            }
+            else if (!int.TryParse(txtDeleteId.Text, out id))
+            {
+                MessageBox.Show("The id must be a NUMBER");
+            }
+            else
+            {
+                using (DatabaseContext context = new DatabaseContext())
+                {
+                    try
+                    {
+                        Product product = context.Products.SingleOrDefault(p => p.Id == id);
+                        if (product != null)
+                        {
+                            context.Products.Remove(product);
+                            int value = context.SaveChanges();
+                            MessageBox.Show($"Success! {value} value removed");
+                            Admin_Load(sender, e);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No product at that id");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Unexpected error occurred\n\n{ex}");
+                    }
+                }
+            }
+        }
     }
 }

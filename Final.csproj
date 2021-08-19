@@ -225,6 +225,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FinalDataSet17.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FinalDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet19.cs">
+      <DependentUpon>FinalDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalDataSet19.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FinalDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -270,6 +283,12 @@
     </Compile>
     <Compile Include="Forum.Designer.cs">
       <DependentUpon>Forum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForumPosts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForumPosts.Designer.cs">
+      <DependentUpon>ForumPosts.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -324,6 +343,9 @@
     <EmbeddedResource Include="Forum.resx">
       <DependentUpon>Forum.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ForumPosts.resx">
+      <DependentUpon>ForumPosts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Landing.resx">
       <DependentUpon>Landing.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,6 +367,7 @@
     <EmbeddedResource Include="StoreProduct.resx">
       <DependentUpon>StoreProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".editorconfig" />
     <None Include="FinalDataSet.xsc">
       <DependentUpon>FinalDataSet.xsd</DependentUpon>
     </None>
@@ -454,6 +477,28 @@
     </None>
     <None Include="FinalDataSet17.xss">
       <DependentUpon>FinalDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet18.xsc">
+      <DependentUpon>FinalDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet18.xss">
+      <DependentUpon>FinalDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet19.xsc">
+      <DependentUpon>FinalDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="FinalDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalDataSet19.xss">
+      <DependentUpon>FinalDataSet19.xsd</DependentUpon>
     </None>
     <None Include="FinalDataSet2.xsc">
       <DependentUpon>FinalDataSet2.xsd</DependentUpon>

@@ -51,58 +51,137 @@ namespace Final
             this.finalDataSet3 = new Final.FinalDataSet3();
             this.tabPageBusinessTypes = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveType = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPageBusinessIssues = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.issueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.businessInformationIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveIssue = new System.Windows.Forms.DataGridViewButtonColumn();
             this.businessIssuesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finalDataSet5 = new Final.FinalDataSet5();
             this.tabPageCustomer = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveCustomer = new System.Windows.Forms.DataGridViewButtonColumn();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finalDataSet6 = new Final.FinalDataSet6();
             this.tabPageEmployee = new System.Windows.Forms.TabPage();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zipDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSave = new System.Windows.Forms.DataGridViewButtonColumn();
             this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finalDataSet7 = new Final.FinalDataSet7();
             this.tabPageForum = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPageForums = new System.Windows.Forms.TabPage();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveForum = new System.Windows.Forms.DataGridViewButtonColumn();
             this.forumsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finalDataSet8 = new Final.FinalDataSet8();
             this.tabPageForumDetails = new System.Windows.Forms.TabPage();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.forumIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveForumDetail = new System.Windows.Forms.DataGridViewButtonColumn();
             this.forumDetailsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.finalDataSet10 = new Final.FinalDataSet10();
             this.tabPageInvoice = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPageInvoices = new System.Windows.Forms.TabPage();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveInvoice = new System.Windows.Forms.DataGridViewButtonColumn();
             this.invoicesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finalDataSet11 = new Final.FinalDataSet11();
             this.tabPageInvoiceDetails = new System.Windows.Forms.TabPage();
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityPurchasedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveInvoiceDetail = new System.Windows.Forms.DataGridViewButtonColumn();
             this.invoiceDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finalDataSet12 = new Final.FinalDataSet12();
             this.tabPagePurchase = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPagePurchaseOrders = new System.Windows.Forms.TabPage();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchaseDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalPaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vendorIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSavePurchaseOrder = new System.Windows.Forms.DataGridViewButtonColumn();
             this.purchaseOrdersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finalDataSet13 = new Final.FinalDataSet13();
             this.tabPagePurchaseOrderDetails = new System.Windows.Forms.TabPage();
             this.dataGridView11 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityPurchasedDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchaseOrderIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSavePurchaseOrderDetail = new System.Windows.Forms.DataGridViewButtonColumn();
             this.purchaseOrderDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finalDataSet14 = new Final.FinalDataSet14();
             this.tabPageProduct = new System.Windows.Forms.TabPage();
             this.dataGridView12 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveProduct = new System.Windows.Forms.DataGridViewButtonColumn();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finalDataSet15 = new Final.FinalDataSet15();
             this.tabPageUser = new System.Windows.Forms.TabPage();
             this.dataGridView13 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveUser = new System.Windows.Forms.DataGridViewButtonColumn();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finalDataSet16 = new Final.FinalDataSet16();
             this.tabPageVendor = new System.Windows.Forms.TabPage();
             this.dataGridView14 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zipDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveVendor = new System.Windows.Forms.DataGridViewButtonColumn();
             this.vendorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finalDataSet17 = new Final.FinalDataSet17();
             this.businessInformationsTableAdapter = new Final.FinalDataSet3TableAdapters.BusinessInformationsTableAdapter();
@@ -122,85 +201,8 @@ namespace Final
             this.productsTableAdapter = new Final.FinalDataSet15TableAdapters.ProductsTableAdapter();
             this.usersTableAdapter = new Final.FinalDataSet16TableAdapters.UsersTableAdapter();
             this.vendorsTableAdapter = new Final.FinalDataSet17TableAdapters.VendorsTableAdapter();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdAtDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSaveType = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdAtDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.issueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.businessInformationIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSaveIssue = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdAtDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSaveCustomer = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdAtDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zipDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSave = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idDataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdAtDataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.forumIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSaveForumDetail = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdAtDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSaveForum = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idDataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdAtDataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityPurchasedDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purchaseOrderIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSavePurchaseOrderDetail = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idDataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdAtDataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSaveProduct = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idDataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdAtDataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSaveUser = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idDataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdAtDataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zipDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSaveVendor = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idDataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdAtDataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSaveInvoice = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idDataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdAtDataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purchaseDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalPaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vendorIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSavePurchaseOrder = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idDataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdAtDataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.invoiceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityPurchasedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSaveInvoiceDetail = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.txtDeleteId = new System.Windows.Forms.TextBox();
+            this.btnDeleteById = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPageBusinesssInfo.SuspendLayout();
@@ -458,6 +460,34 @@ namespace Final
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn1
+            // 
+            this.createdAtDataGridViewTextBoxColumn1.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn1.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn1.Name = "createdAtDataGridViewTextBoxColumn1";
+            this.createdAtDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            // 
+            // btnSaveType
+            // 
+            this.btnSaveType.HeaderText = "Save";
+            this.btnSaveType.Name = "btnSaveType";
+            this.btnSaveType.ReadOnly = true;
+            this.btnSaveType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnSaveType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // tabPageBusinessIssues
             // 
             this.tabPageBusinessIssues.Controls.Add(this.dataGridView3);
@@ -484,6 +514,42 @@ namespace Final
             this.dataGridView3.Size = new System.Drawing.Size(765, 339);
             this.dataGridView3.TabIndex = 0;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn2
+            // 
+            this.idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn2.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn2
+            // 
+            this.createdAtDataGridViewTextBoxColumn2.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn2.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn2.Name = "createdAtDataGridViewTextBoxColumn2";
+            this.createdAtDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // issueDataGridViewTextBoxColumn
+            // 
+            this.issueDataGridViewTextBoxColumn.DataPropertyName = "Issue";
+            this.issueDataGridViewTextBoxColumn.HeaderText = "Issue";
+            this.issueDataGridViewTextBoxColumn.Name = "issueDataGridViewTextBoxColumn";
+            this.issueDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // businessInformationIdDataGridViewTextBoxColumn
+            // 
+            this.businessInformationIdDataGridViewTextBoxColumn.DataPropertyName = "BusinessInformationId";
+            this.businessInformationIdDataGridViewTextBoxColumn.HeaderText = "BusinessInformationId";
+            this.businessInformationIdDataGridViewTextBoxColumn.Name = "businessInformationIdDataGridViewTextBoxColumn";
+            this.businessInformationIdDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // btnSaveIssue
+            // 
+            this.btnSaveIssue.HeaderText = "Save";
+            this.btnSaveIssue.Name = "btnSaveIssue";
+            this.btnSaveIssue.ReadOnly = true;
+            this.btnSaveIssue.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnSaveIssue.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // businessIssuesBindingSource
             // 
@@ -526,6 +592,57 @@ namespace Final
             this.dataGridView4.TabIndex = 0;
             this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
+            // idDataGridViewTextBoxColumn3
+            // 
+            this.idDataGridViewTextBoxColumn3.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn3.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
+            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn3
+            // 
+            this.createdAtDataGridViewTextBoxColumn3.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn3.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn3.Name = "createdAtDataGridViewTextBoxColumn3";
+            this.createdAtDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            // 
+            // zipDataGridViewTextBoxColumn
+            // 
+            this.zipDataGridViewTextBoxColumn.DataPropertyName = "Zip";
+            this.zipDataGridViewTextBoxColumn.HeaderText = "Zip";
+            this.zipDataGridViewTextBoxColumn.Name = "zipDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            // 
+            // btnSaveCustomer
+            // 
+            this.btnSaveCustomer.HeaderText = "Save";
+            this.btnSaveCustomer.Name = "btnSaveCustomer";
+            this.btnSaveCustomer.ReadOnly = true;
+            this.btnSaveCustomer.Text = "save";
+            // 
             // customersBindingSource
             // 
             this.customersBindingSource.DataMember = "Customers";
@@ -567,6 +684,68 @@ namespace Final
             this.dataGridView5.Size = new System.Drawing.Size(782, 374);
             this.dataGridView5.TabIndex = 0;
             this.dataGridView5.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn4
+            // 
+            this.idDataGridViewTextBoxColumn4.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn4.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn4.Name = "idDataGridViewTextBoxColumn4";
+            this.idDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn4
+            // 
+            this.createdAtDataGridViewTextBoxColumn4.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn4.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn4.Name = "createdAtDataGridViewTextBoxColumn4";
+            this.createdAtDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            // 
+            // dateOfBirthDataGridViewTextBoxColumn
+            // 
+            this.dateOfBirthDataGridViewTextBoxColumn.DataPropertyName = "DateOfBirth";
+            this.dateOfBirthDataGridViewTextBoxColumn.HeaderText = "DateOfBirth";
+            this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn1
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn1.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn1.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn1.Name = "phoneNumberDataGridViewTextBoxColumn1";
+            // 
+            // addressDataGridViewTextBoxColumn1
+            // 
+            this.addressDataGridViewTextBoxColumn1.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn1.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn1.Name = "addressDataGridViewTextBoxColumn1";
+            // 
+            // stateDataGridViewTextBoxColumn1
+            // 
+            this.stateDataGridViewTextBoxColumn1.DataPropertyName = "State";
+            this.stateDataGridViewTextBoxColumn1.HeaderText = "State";
+            this.stateDataGridViewTextBoxColumn1.Name = "stateDataGridViewTextBoxColumn1";
+            // 
+            // zipDataGridViewTextBoxColumn1
+            // 
+            this.zipDataGridViewTextBoxColumn1.DataPropertyName = "Zip";
+            this.zipDataGridViewTextBoxColumn1.HeaderText = "Zip";
+            this.zipDataGridViewTextBoxColumn1.Name = "zipDataGridViewTextBoxColumn1";
+            // 
+            // salaryDataGridViewTextBoxColumn
+            // 
+            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "Salary";
+            this.salaryDataGridViewTextBoxColumn.HeaderText = "Salary";
+            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
+            // 
+            // btnSave
+            // 
+            this.btnSave.HeaderText = "Save";
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Text = "save";
             // 
             // employeesBindingSource
             // 
@@ -625,6 +804,33 @@ namespace Final
             this.dataGridView6.TabIndex = 0;
             this.dataGridView6.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView6_CellContentClick);
             // 
+            // idDataGridViewTextBoxColumn5
+            // 
+            this.idDataGridViewTextBoxColumn5.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn5.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn5.Name = "idDataGridViewTextBoxColumn5";
+            this.idDataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn5
+            // 
+            this.createdAtDataGridViewTextBoxColumn5.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn5.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn5.Name = "createdAtDataGridViewTextBoxColumn5";
+            this.createdAtDataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn2
+            // 
+            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn2.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
+            // 
+            // btnSaveForum
+            // 
+            this.btnSaveForum.HeaderText = "Save";
+            this.btnSaveForum.Name = "btnSaveForum";
+            this.btnSaveForum.ReadOnly = true;
+            this.btnSaveForum.Text = "save";
+            // 
             // forumsBindingSource
             // 
             this.forumsBindingSource.DataMember = "Forums";
@@ -663,6 +869,45 @@ namespace Final
             this.dataGridView7.Size = new System.Drawing.Size(762, 336);
             this.dataGridView7.TabIndex = 0;
             this.dataGridView7.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView7_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn6
+            // 
+            this.idDataGridViewTextBoxColumn6.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn6.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn6.Name = "idDataGridViewTextBoxColumn6";
+            this.idDataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn6
+            // 
+            this.createdAtDataGridViewTextBoxColumn6.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn6.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn6.Name = "createdAtDataGridViewTextBoxColumn6";
+            // 
+            // contentDataGridViewTextBoxColumn
+            // 
+            this.contentDataGridViewTextBoxColumn.DataPropertyName = "Content";
+            this.contentDataGridViewTextBoxColumn.HeaderText = "Content";
+            this.contentDataGridViewTextBoxColumn.Name = "contentDataGridViewTextBoxColumn";
+            // 
+            // forumIdDataGridViewTextBoxColumn
+            // 
+            this.forumIdDataGridViewTextBoxColumn.DataPropertyName = "ForumId";
+            this.forumIdDataGridViewTextBoxColumn.HeaderText = "ForumId";
+            this.forumIdDataGridViewTextBoxColumn.Name = "forumIdDataGridViewTextBoxColumn";
+            // 
+            // userIdDataGridViewTextBoxColumn
+            // 
+            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
+            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
+            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
+            // 
+            // btnSaveForumDetail
+            // 
+            this.btnSaveForumDetail.HeaderText = "Save";
+            this.btnSaveForumDetail.Name = "btnSaveForumDetail";
+            this.btnSaveForumDetail.ReadOnly = true;
+            this.btnSaveForumDetail.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnSaveForumDetail.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // forumDetailsBindingSource1
             // 
@@ -721,6 +966,33 @@ namespace Final
             this.dataGridView8.TabIndex = 0;
             this.dataGridView8.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView8_CellContentClick);
             // 
+            // idDataGridViewTextBoxColumn7
+            // 
+            this.idDataGridViewTextBoxColumn7.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn7.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn7.Name = "idDataGridViewTextBoxColumn7";
+            this.idDataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn7
+            // 
+            this.createdAtDataGridViewTextBoxColumn7.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn7.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn7.Name = "createdAtDataGridViewTextBoxColumn7";
+            this.createdAtDataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // customerIdDataGridViewTextBoxColumn
+            // 
+            this.customerIdDataGridViewTextBoxColumn.DataPropertyName = "CustomerId";
+            this.customerIdDataGridViewTextBoxColumn.HeaderText = "CustomerId";
+            this.customerIdDataGridViewTextBoxColumn.Name = "customerIdDataGridViewTextBoxColumn";
+            // 
+            // btnSaveInvoice
+            // 
+            this.btnSaveInvoice.HeaderText = "Save";
+            this.btnSaveInvoice.Name = "btnSaveInvoice";
+            this.btnSaveInvoice.ReadOnly = true;
+            this.btnSaveInvoice.Text = "save";
+            // 
             // invoicesBindingSource
             // 
             this.invoicesBindingSource.DataMember = "Invoices";
@@ -759,6 +1031,45 @@ namespace Final
             this.dataGridView9.Size = new System.Drawing.Size(759, 333);
             this.dataGridView9.TabIndex = 0;
             this.dataGridView9.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView9_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn8
+            // 
+            this.idDataGridViewTextBoxColumn8.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn8.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn8.Name = "idDataGridViewTextBoxColumn8";
+            this.idDataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn8
+            // 
+            this.createdAtDataGridViewTextBoxColumn8.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn8.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn8.Name = "createdAtDataGridViewTextBoxColumn8";
+            this.createdAtDataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // invoiceIdDataGridViewTextBoxColumn
+            // 
+            this.invoiceIdDataGridViewTextBoxColumn.DataPropertyName = "InvoiceId";
+            this.invoiceIdDataGridViewTextBoxColumn.HeaderText = "InvoiceId";
+            this.invoiceIdDataGridViewTextBoxColumn.Name = "invoiceIdDataGridViewTextBoxColumn";
+            // 
+            // productIdDataGridViewTextBoxColumn
+            // 
+            this.productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
+            this.productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
+            this.productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
+            // 
+            // quantityPurchasedDataGridViewTextBoxColumn
+            // 
+            this.quantityPurchasedDataGridViewTextBoxColumn.DataPropertyName = "QuantityPurchased";
+            this.quantityPurchasedDataGridViewTextBoxColumn.HeaderText = "QuantityPurchased";
+            this.quantityPurchasedDataGridViewTextBoxColumn.Name = "quantityPurchasedDataGridViewTextBoxColumn";
+            // 
+            // btnSaveInvoiceDetail
+            // 
+            this.btnSaveInvoiceDetail.HeaderText = "Save";
+            this.btnSaveInvoiceDetail.Name = "btnSaveInvoiceDetail";
+            this.btnSaveInvoiceDetail.ReadOnly = true;
+            this.btnSaveInvoiceDetail.Text = "save";
             // 
             // invoiceDetailsBindingSource
             // 
@@ -819,6 +1130,45 @@ namespace Final
             this.dataGridView10.TabIndex = 0;
             this.dataGridView10.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView10_CellContentClick);
             // 
+            // idDataGridViewTextBoxColumn9
+            // 
+            this.idDataGridViewTextBoxColumn9.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn9.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn9.Name = "idDataGridViewTextBoxColumn9";
+            this.idDataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn9
+            // 
+            this.createdAtDataGridViewTextBoxColumn9.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn9.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn9.Name = "createdAtDataGridViewTextBoxColumn9";
+            this.createdAtDataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // purchaseDateDataGridViewTextBoxColumn
+            // 
+            this.purchaseDateDataGridViewTextBoxColumn.DataPropertyName = "PurchaseDate";
+            this.purchaseDateDataGridViewTextBoxColumn.HeaderText = "PurchaseDate";
+            this.purchaseDateDataGridViewTextBoxColumn.Name = "purchaseDateDataGridViewTextBoxColumn";
+            // 
+            // totalPaidDataGridViewTextBoxColumn
+            // 
+            this.totalPaidDataGridViewTextBoxColumn.DataPropertyName = "TotalPaid";
+            this.totalPaidDataGridViewTextBoxColumn.HeaderText = "TotalPaid";
+            this.totalPaidDataGridViewTextBoxColumn.Name = "totalPaidDataGridViewTextBoxColumn";
+            // 
+            // vendorIdDataGridViewTextBoxColumn
+            // 
+            this.vendorIdDataGridViewTextBoxColumn.DataPropertyName = "VendorId";
+            this.vendorIdDataGridViewTextBoxColumn.HeaderText = "VendorId";
+            this.vendorIdDataGridViewTextBoxColumn.Name = "vendorIdDataGridViewTextBoxColumn";
+            // 
+            // btnSavePurchaseOrder
+            // 
+            this.btnSavePurchaseOrder.HeaderText = "Save";
+            this.btnSavePurchaseOrder.Name = "btnSavePurchaseOrder";
+            this.btnSavePurchaseOrder.ReadOnly = true;
+            this.btnSavePurchaseOrder.Text = "save";
+            // 
             // purchaseOrdersBindingSource
             // 
             this.purchaseOrdersBindingSource.DataMember = "PurchaseOrders";
@@ -858,6 +1208,45 @@ namespace Final
             this.dataGridView11.TabIndex = 0;
             this.dataGridView11.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView11_CellContentClick);
             // 
+            // idDataGridViewTextBoxColumn10
+            // 
+            this.idDataGridViewTextBoxColumn10.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn10.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn10.Name = "idDataGridViewTextBoxColumn10";
+            this.idDataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn10
+            // 
+            this.createdAtDataGridViewTextBoxColumn10.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn10.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn10.Name = "createdAtDataGridViewTextBoxColumn10";
+            this.createdAtDataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // productIdDataGridViewTextBoxColumn1
+            // 
+            this.productIdDataGridViewTextBoxColumn1.DataPropertyName = "ProductId";
+            this.productIdDataGridViewTextBoxColumn1.HeaderText = "ProductId";
+            this.productIdDataGridViewTextBoxColumn1.Name = "productIdDataGridViewTextBoxColumn1";
+            // 
+            // quantityPurchasedDataGridViewTextBoxColumn1
+            // 
+            this.quantityPurchasedDataGridViewTextBoxColumn1.DataPropertyName = "QuantityPurchased";
+            this.quantityPurchasedDataGridViewTextBoxColumn1.HeaderText = "QuantityPurchased";
+            this.quantityPurchasedDataGridViewTextBoxColumn1.Name = "quantityPurchasedDataGridViewTextBoxColumn1";
+            // 
+            // purchaseOrderIdDataGridViewTextBoxColumn
+            // 
+            this.purchaseOrderIdDataGridViewTextBoxColumn.DataPropertyName = "PurchaseOrderId";
+            this.purchaseOrderIdDataGridViewTextBoxColumn.HeaderText = "PurchaseOrderId";
+            this.purchaseOrderIdDataGridViewTextBoxColumn.Name = "purchaseOrderIdDataGridViewTextBoxColumn";
+            // 
+            // btnSavePurchaseOrderDetail
+            // 
+            this.btnSavePurchaseOrderDetail.HeaderText = "Save";
+            this.btnSavePurchaseOrderDetail.Name = "btnSavePurchaseOrderDetail";
+            this.btnSavePurchaseOrderDetail.ReadOnly = true;
+            this.btnSavePurchaseOrderDetail.Text = "save";
+            // 
             // purchaseOrderDetailsBindingSource
             // 
             this.purchaseOrderDetailsBindingSource.DataMember = "PurchaseOrderDetails";
@@ -870,6 +1259,8 @@ namespace Final
             // 
             // tabPageProduct
             // 
+            this.tabPageProduct.Controls.Add(this.btnDeleteById);
+            this.tabPageProduct.Controls.Add(this.txtDeleteId);
             this.tabPageProduct.Controls.Add(this.dataGridView12);
             this.tabPageProduct.Location = new System.Drawing.Point(4, 22);
             this.tabPageProduct.Name = "tabPageProduct";
@@ -892,9 +1283,47 @@ namespace Final
             this.dataGridView12.DataSource = this.productsBindingSource;
             this.dataGridView12.Location = new System.Drawing.Point(4, 4);
             this.dataGridView12.Name = "dataGridView12";
-            this.dataGridView12.Size = new System.Drawing.Size(779, 371);
+            this.dataGridView12.Size = new System.Drawing.Size(646, 371);
             this.dataGridView12.TabIndex = 0;
             this.dataGridView12.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView12_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn11
+            // 
+            this.idDataGridViewTextBoxColumn11.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn11.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn11.Name = "idDataGridViewTextBoxColumn11";
+            this.idDataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn11
+            // 
+            this.createdAtDataGridViewTextBoxColumn11.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn11.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn11.Name = "createdAtDataGridViewTextBoxColumn11";
+            // 
+            // nameDataGridViewTextBoxColumn3
+            // 
+            this.nameDataGridViewTextBoxColumn3.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn3.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn3.Name = "nameDataGridViewTextBoxColumn3";
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // btnSaveProduct
+            // 
+            this.btnSaveProduct.HeaderText = "Save";
+            this.btnSaveProduct.Name = "btnSaveProduct";
+            this.btnSaveProduct.ReadOnly = true;
+            this.btnSaveProduct.Text = "save";
             // 
             // productsBindingSource
             // 
@@ -933,6 +1362,45 @@ namespace Final
             this.dataGridView13.Size = new System.Drawing.Size(779, 371);
             this.dataGridView13.TabIndex = 0;
             this.dataGridView13.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView13_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn12
+            // 
+            this.idDataGridViewTextBoxColumn12.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn12.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn12.Name = "idDataGridViewTextBoxColumn12";
+            this.idDataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn12
+            // 
+            this.createdAtDataGridViewTextBoxColumn12.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn12.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn12.Name = "createdAtDataGridViewTextBoxColumn12";
+            this.createdAtDataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // customerIdDataGridViewTextBoxColumn1
+            // 
+            this.customerIdDataGridViewTextBoxColumn1.DataPropertyName = "CustomerId";
+            this.customerIdDataGridViewTextBoxColumn1.HeaderText = "CustomerId";
+            this.customerIdDataGridViewTextBoxColumn1.Name = "customerIdDataGridViewTextBoxColumn1";
+            // 
+            // btnSaveUser
+            // 
+            this.btnSaveUser.HeaderText = "Save";
+            this.btnSaveUser.Name = "btnSaveUser";
+            this.btnSaveUser.ReadOnly = true;
+            this.btnSaveUser.Text = "save";
             // 
             // usersBindingSource
             // 
@@ -973,6 +1441,57 @@ namespace Final
             this.dataGridView14.Size = new System.Drawing.Size(779, 371);
             this.dataGridView14.TabIndex = 0;
             this.dataGridView14.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView14_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn13
+            // 
+            this.idDataGridViewTextBoxColumn13.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn13.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn13.Name = "idDataGridViewTextBoxColumn13";
+            this.idDataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn13
+            // 
+            this.createdAtDataGridViewTextBoxColumn13.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn13.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn13.Name = "createdAtDataGridViewTextBoxColumn13";
+            this.createdAtDataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn4
+            // 
+            this.nameDataGridViewTextBoxColumn4.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn4.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn4.Name = "nameDataGridViewTextBoxColumn4";
+            // 
+            // addressDataGridViewTextBoxColumn2
+            // 
+            this.addressDataGridViewTextBoxColumn2.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn2.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn2.Name = "addressDataGridViewTextBoxColumn2";
+            // 
+            // stateDataGridViewTextBoxColumn2
+            // 
+            this.stateDataGridViewTextBoxColumn2.DataPropertyName = "State";
+            this.stateDataGridViewTextBoxColumn2.HeaderText = "State";
+            this.stateDataGridViewTextBoxColumn2.Name = "stateDataGridViewTextBoxColumn2";
+            // 
+            // zipDataGridViewTextBoxColumn2
+            // 
+            this.zipDataGridViewTextBoxColumn2.DataPropertyName = "Zip";
+            this.zipDataGridViewTextBoxColumn2.HeaderText = "Zip";
+            this.zipDataGridViewTextBoxColumn2.Name = "zipDataGridViewTextBoxColumn2";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn2
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn2.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn2.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn2.Name = "phoneNumberDataGridViewTextBoxColumn2";
+            // 
+            // btnSaveVendor
+            // 
+            this.btnSaveVendor.HeaderText = "Save";
+            this.btnSaveVendor.Name = "btnSaveVendor";
+            this.btnSaveVendor.ReadOnly = true;
+            this.btnSaveVendor.Text = "save";
             // 
             // vendorsBindingSource
             // 
@@ -1054,520 +1573,23 @@ namespace Final
             // 
             this.vendorsTableAdapter.ClearBeforeFill = true;
             // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // createdAtDataGridViewTextBoxColumn1
-            // 
-            this.createdAtDataGridViewTextBoxColumn1.DataPropertyName = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn1.HeaderText = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn1.Name = "createdAtDataGridViewTextBoxColumn1";
-            this.createdAtDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            // 
-            // btnSaveType
-            // 
-            this.btnSaveType.HeaderText = "Save";
-            this.btnSaveType.Name = "btnSaveType";
-            this.btnSaveType.ReadOnly = true;
-            this.btnSaveType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.btnSaveType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // idDataGridViewTextBoxColumn2
-            // 
-            this.idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn2.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
-            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // createdAtDataGridViewTextBoxColumn2
-            // 
-            this.createdAtDataGridViewTextBoxColumn2.DataPropertyName = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn2.HeaderText = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn2.Name = "createdAtDataGridViewTextBoxColumn2";
-            this.createdAtDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // issueDataGridViewTextBoxColumn
-            // 
-            this.issueDataGridViewTextBoxColumn.DataPropertyName = "Issue";
-            this.issueDataGridViewTextBoxColumn.HeaderText = "Issue";
-            this.issueDataGridViewTextBoxColumn.Name = "issueDataGridViewTextBoxColumn";
-            this.issueDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // businessInformationIdDataGridViewTextBoxColumn
-            // 
-            this.businessInformationIdDataGridViewTextBoxColumn.DataPropertyName = "BusinessInformationId";
-            this.businessInformationIdDataGridViewTextBoxColumn.HeaderText = "BusinessInformationId";
-            this.businessInformationIdDataGridViewTextBoxColumn.Name = "businessInformationIdDataGridViewTextBoxColumn";
-            this.businessInformationIdDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // btnSaveIssue
-            // 
-            this.btnSaveIssue.HeaderText = "Save";
-            this.btnSaveIssue.Name = "btnSaveIssue";
-            this.btnSaveIssue.ReadOnly = true;
-            this.btnSaveIssue.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.btnSaveIssue.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // idDataGridViewTextBoxColumn3
-            // 
-            this.idDataGridViewTextBoxColumn3.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn3.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
-            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // createdAtDataGridViewTextBoxColumn3
-            // 
-            this.createdAtDataGridViewTextBoxColumn3.DataPropertyName = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn3.HeaderText = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn3.Name = "createdAtDataGridViewTextBoxColumn3";
-            this.createdAtDataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            // 
-            // zipDataGridViewTextBoxColumn
-            // 
-            this.zipDataGridViewTextBoxColumn.DataPropertyName = "Zip";
-            this.zipDataGridViewTextBoxColumn.HeaderText = "Zip";
-            this.zipDataGridViewTextBoxColumn.Name = "zipDataGridViewTextBoxColumn";
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            // 
-            // btnSaveCustomer
-            // 
-            this.btnSaveCustomer.HeaderText = "Save";
-            this.btnSaveCustomer.Name = "btnSaveCustomer";
-            this.btnSaveCustomer.ReadOnly = true;
-            this.btnSaveCustomer.Text = "save";
-            // 
-            // idDataGridViewTextBoxColumn4
-            // 
-            this.idDataGridViewTextBoxColumn4.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn4.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn4.Name = "idDataGridViewTextBoxColumn4";
-            this.idDataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // createdAtDataGridViewTextBoxColumn4
-            // 
-            this.createdAtDataGridViewTextBoxColumn4.DataPropertyName = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn4.HeaderText = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn4.Name = "createdAtDataGridViewTextBoxColumn4";
-            this.createdAtDataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            // 
-            // dateOfBirthDataGridViewTextBoxColumn
-            // 
-            this.dateOfBirthDataGridViewTextBoxColumn.DataPropertyName = "DateOfBirth";
-            this.dateOfBirthDataGridViewTextBoxColumn.HeaderText = "DateOfBirth";
-            this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
-            // 
-            // phoneNumberDataGridViewTextBoxColumn1
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn1.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn1.HeaderText = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn1.Name = "phoneNumberDataGridViewTextBoxColumn1";
-            // 
-            // addressDataGridViewTextBoxColumn1
-            // 
-            this.addressDataGridViewTextBoxColumn1.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn1.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn1.Name = "addressDataGridViewTextBoxColumn1";
-            // 
-            // stateDataGridViewTextBoxColumn1
-            // 
-            this.stateDataGridViewTextBoxColumn1.DataPropertyName = "State";
-            this.stateDataGridViewTextBoxColumn1.HeaderText = "State";
-            this.stateDataGridViewTextBoxColumn1.Name = "stateDataGridViewTextBoxColumn1";
-            // 
-            // zipDataGridViewTextBoxColumn1
-            // 
-            this.zipDataGridViewTextBoxColumn1.DataPropertyName = "Zip";
-            this.zipDataGridViewTextBoxColumn1.HeaderText = "Zip";
-            this.zipDataGridViewTextBoxColumn1.Name = "zipDataGridViewTextBoxColumn1";
-            // 
-            // salaryDataGridViewTextBoxColumn
-            // 
-            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "Salary";
-            this.salaryDataGridViewTextBoxColumn.HeaderText = "Salary";
-            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
-            // 
-            // btnSave
-            // 
-            this.btnSave.HeaderText = "Save";
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Text = "save";
-            // 
-            // idDataGridViewTextBoxColumn6
-            // 
-            this.idDataGridViewTextBoxColumn6.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn6.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn6.Name = "idDataGridViewTextBoxColumn6";
-            this.idDataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // createdAtDataGridViewTextBoxColumn6
-            // 
-            this.createdAtDataGridViewTextBoxColumn6.DataPropertyName = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn6.HeaderText = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn6.Name = "createdAtDataGridViewTextBoxColumn6";
-            // 
-            // contentDataGridViewTextBoxColumn
-            // 
-            this.contentDataGridViewTextBoxColumn.DataPropertyName = "Content";
-            this.contentDataGridViewTextBoxColumn.HeaderText = "Content";
-            this.contentDataGridViewTextBoxColumn.Name = "contentDataGridViewTextBoxColumn";
-            // 
-            // forumIdDataGridViewTextBoxColumn
-            // 
-            this.forumIdDataGridViewTextBoxColumn.DataPropertyName = "ForumId";
-            this.forumIdDataGridViewTextBoxColumn.HeaderText = "ForumId";
-            this.forumIdDataGridViewTextBoxColumn.Name = "forumIdDataGridViewTextBoxColumn";
-            // 
-            // userIdDataGridViewTextBoxColumn
-            // 
-            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
-            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
-            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
-            // 
-            // btnSaveForumDetail
-            // 
-            this.btnSaveForumDetail.HeaderText = "Save";
-            this.btnSaveForumDetail.Name = "btnSaveForumDetail";
-            this.btnSaveForumDetail.ReadOnly = true;
-            this.btnSaveForumDetail.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.btnSaveForumDetail.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // idDataGridViewTextBoxColumn5
-            // 
-            this.idDataGridViewTextBoxColumn5.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn5.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn5.Name = "idDataGridViewTextBoxColumn5";
-            this.idDataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // createdAtDataGridViewTextBoxColumn5
-            // 
-            this.createdAtDataGridViewTextBoxColumn5.DataPropertyName = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn5.HeaderText = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn5.Name = "createdAtDataGridViewTextBoxColumn5";
-            this.createdAtDataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn2
-            // 
-            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
-            // 
-            // btnSaveForum
-            // 
-            this.btnSaveForum.HeaderText = "Save";
-            this.btnSaveForum.Name = "btnSaveForum";
-            this.btnSaveForum.ReadOnly = true;
-            this.btnSaveForum.Text = "save";
-            // 
-            // idDataGridViewTextBoxColumn10
-            // 
-            this.idDataGridViewTextBoxColumn10.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn10.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn10.Name = "idDataGridViewTextBoxColumn10";
-            this.idDataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // createdAtDataGridViewTextBoxColumn10
-            // 
-            this.createdAtDataGridViewTextBoxColumn10.DataPropertyName = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn10.HeaderText = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn10.Name = "createdAtDataGridViewTextBoxColumn10";
-            this.createdAtDataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // productIdDataGridViewTextBoxColumn1
-            // 
-            this.productIdDataGridViewTextBoxColumn1.DataPropertyName = "ProductId";
-            this.productIdDataGridViewTextBoxColumn1.HeaderText = "ProductId";
-            this.productIdDataGridViewTextBoxColumn1.Name = "productIdDataGridViewTextBoxColumn1";
-            // 
-            // quantityPurchasedDataGridViewTextBoxColumn1
-            // 
-            this.quantityPurchasedDataGridViewTextBoxColumn1.DataPropertyName = "QuantityPurchased";
-            this.quantityPurchasedDataGridViewTextBoxColumn1.HeaderText = "QuantityPurchased";
-            this.quantityPurchasedDataGridViewTextBoxColumn1.Name = "quantityPurchasedDataGridViewTextBoxColumn1";
-            // 
-            // purchaseOrderIdDataGridViewTextBoxColumn
-            // 
-            this.purchaseOrderIdDataGridViewTextBoxColumn.DataPropertyName = "PurchaseOrderId";
-            this.purchaseOrderIdDataGridViewTextBoxColumn.HeaderText = "PurchaseOrderId";
-            this.purchaseOrderIdDataGridViewTextBoxColumn.Name = "purchaseOrderIdDataGridViewTextBoxColumn";
-            // 
-            // btnSavePurchaseOrderDetail
-            // 
-            this.btnSavePurchaseOrderDetail.HeaderText = "Save";
-            this.btnSavePurchaseOrderDetail.Name = "btnSavePurchaseOrderDetail";
-            this.btnSavePurchaseOrderDetail.ReadOnly = true;
-            this.btnSavePurchaseOrderDetail.Text = "save";
-            // 
-            // idDataGridViewTextBoxColumn11
-            // 
-            this.idDataGridViewTextBoxColumn11.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn11.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn11.Name = "idDataGridViewTextBoxColumn11";
-            this.idDataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // createdAtDataGridViewTextBoxColumn11
-            // 
-            this.createdAtDataGridViewTextBoxColumn11.DataPropertyName = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn11.HeaderText = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn11.Name = "createdAtDataGridViewTextBoxColumn11";
-            // 
-            // nameDataGridViewTextBoxColumn3
-            // 
-            this.nameDataGridViewTextBoxColumn3.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn3.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn3.Name = "nameDataGridViewTextBoxColumn3";
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // btnSaveProduct
-            // 
-            this.btnSaveProduct.HeaderText = "Save";
-            this.btnSaveProduct.Name = "btnSaveProduct";
-            this.btnSaveProduct.ReadOnly = true;
-            this.btnSaveProduct.Text = "save";
-            // 
-            // idDataGridViewTextBoxColumn12
-            // 
-            this.idDataGridViewTextBoxColumn12.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn12.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn12.Name = "idDataGridViewTextBoxColumn12";
-            this.idDataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // createdAtDataGridViewTextBoxColumn12
-            // 
-            this.createdAtDataGridViewTextBoxColumn12.DataPropertyName = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn12.HeaderText = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn12.Name = "createdAtDataGridViewTextBoxColumn12";
-            this.createdAtDataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            // 
-            // customerIdDataGridViewTextBoxColumn1
-            // 
-            this.customerIdDataGridViewTextBoxColumn1.DataPropertyName = "CustomerId";
-            this.customerIdDataGridViewTextBoxColumn1.HeaderText = "CustomerId";
-            this.customerIdDataGridViewTextBoxColumn1.Name = "customerIdDataGridViewTextBoxColumn1";
-            // 
-            // btnSaveUser
-            // 
-            this.btnSaveUser.HeaderText = "Save";
-            this.btnSaveUser.Name = "btnSaveUser";
-            this.btnSaveUser.ReadOnly = true;
-            this.btnSaveUser.Text = "save";
-            // 
-            // idDataGridViewTextBoxColumn13
-            // 
-            this.idDataGridViewTextBoxColumn13.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn13.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn13.Name = "idDataGridViewTextBoxColumn13";
-            this.idDataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // createdAtDataGridViewTextBoxColumn13
-            // 
-            this.createdAtDataGridViewTextBoxColumn13.DataPropertyName = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn13.HeaderText = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn13.Name = "createdAtDataGridViewTextBoxColumn13";
-            this.createdAtDataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn4
-            // 
-            this.nameDataGridViewTextBoxColumn4.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn4.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn4.Name = "nameDataGridViewTextBoxColumn4";
-            // 
-            // addressDataGridViewTextBoxColumn2
-            // 
-            this.addressDataGridViewTextBoxColumn2.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn2.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn2.Name = "addressDataGridViewTextBoxColumn2";
-            // 
-            // stateDataGridViewTextBoxColumn2
-            // 
-            this.stateDataGridViewTextBoxColumn2.DataPropertyName = "State";
-            this.stateDataGridViewTextBoxColumn2.HeaderText = "State";
-            this.stateDataGridViewTextBoxColumn2.Name = "stateDataGridViewTextBoxColumn2";
-            // 
-            // zipDataGridViewTextBoxColumn2
-            // 
-            this.zipDataGridViewTextBoxColumn2.DataPropertyName = "Zip";
-            this.zipDataGridViewTextBoxColumn2.HeaderText = "Zip";
-            this.zipDataGridViewTextBoxColumn2.Name = "zipDataGridViewTextBoxColumn2";
-            // 
-            // phoneNumberDataGridViewTextBoxColumn2
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn2.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn2.HeaderText = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn2.Name = "phoneNumberDataGridViewTextBoxColumn2";
-            // 
-            // btnSaveVendor
-            // 
-            this.btnSaveVendor.HeaderText = "Save";
-            this.btnSaveVendor.Name = "btnSaveVendor";
-            this.btnSaveVendor.ReadOnly = true;
-            this.btnSaveVendor.Text = "save";
-            // 
-            // idDataGridViewTextBoxColumn7
-            // 
-            this.idDataGridViewTextBoxColumn7.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn7.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn7.Name = "idDataGridViewTextBoxColumn7";
-            this.idDataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // createdAtDataGridViewTextBoxColumn7
-            // 
-            this.createdAtDataGridViewTextBoxColumn7.DataPropertyName = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn7.HeaderText = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn7.Name = "createdAtDataGridViewTextBoxColumn7";
-            this.createdAtDataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // customerIdDataGridViewTextBoxColumn
-            // 
-            this.customerIdDataGridViewTextBoxColumn.DataPropertyName = "CustomerId";
-            this.customerIdDataGridViewTextBoxColumn.HeaderText = "CustomerId";
-            this.customerIdDataGridViewTextBoxColumn.Name = "customerIdDataGridViewTextBoxColumn";
-            // 
-            // btnSaveInvoice
-            // 
-            this.btnSaveInvoice.HeaderText = "Save";
-            this.btnSaveInvoice.Name = "btnSaveInvoice";
-            this.btnSaveInvoice.ReadOnly = true;
-            this.btnSaveInvoice.Text = "save";
-            // 
-            // idDataGridViewTextBoxColumn9
-            // 
-            this.idDataGridViewTextBoxColumn9.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn9.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn9.Name = "idDataGridViewTextBoxColumn9";
-            this.idDataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // createdAtDataGridViewTextBoxColumn9
-            // 
-            this.createdAtDataGridViewTextBoxColumn9.DataPropertyName = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn9.HeaderText = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn9.Name = "createdAtDataGridViewTextBoxColumn9";
-            this.createdAtDataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // purchaseDateDataGridViewTextBoxColumn
-            // 
-            this.purchaseDateDataGridViewTextBoxColumn.DataPropertyName = "PurchaseDate";
-            this.purchaseDateDataGridViewTextBoxColumn.HeaderText = "PurchaseDate";
-            this.purchaseDateDataGridViewTextBoxColumn.Name = "purchaseDateDataGridViewTextBoxColumn";
-            // 
-            // totalPaidDataGridViewTextBoxColumn
-            // 
-            this.totalPaidDataGridViewTextBoxColumn.DataPropertyName = "TotalPaid";
-            this.totalPaidDataGridViewTextBoxColumn.HeaderText = "TotalPaid";
-            this.totalPaidDataGridViewTextBoxColumn.Name = "totalPaidDataGridViewTextBoxColumn";
-            // 
-            // vendorIdDataGridViewTextBoxColumn
-            // 
-            this.vendorIdDataGridViewTextBoxColumn.DataPropertyName = "VendorId";
-            this.vendorIdDataGridViewTextBoxColumn.HeaderText = "VendorId";
-            this.vendorIdDataGridViewTextBoxColumn.Name = "vendorIdDataGridViewTextBoxColumn";
-            // 
-            // btnSavePurchaseOrder
-            // 
-            this.btnSavePurchaseOrder.HeaderText = "Save";
-            this.btnSavePurchaseOrder.Name = "btnSavePurchaseOrder";
-            this.btnSavePurchaseOrder.ReadOnly = true;
-            this.btnSavePurchaseOrder.Text = "save";
-            // 
-            // idDataGridViewTextBoxColumn8
-            // 
-            this.idDataGridViewTextBoxColumn8.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn8.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn8.Name = "idDataGridViewTextBoxColumn8";
-            this.idDataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // createdAtDataGridViewTextBoxColumn8
-            // 
-            this.createdAtDataGridViewTextBoxColumn8.DataPropertyName = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn8.HeaderText = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn8.Name = "createdAtDataGridViewTextBoxColumn8";
-            this.createdAtDataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // invoiceIdDataGridViewTextBoxColumn
-            // 
-            this.invoiceIdDataGridViewTextBoxColumn.DataPropertyName = "InvoiceId";
-            this.invoiceIdDataGridViewTextBoxColumn.HeaderText = "InvoiceId";
-            this.invoiceIdDataGridViewTextBoxColumn.Name = "invoiceIdDataGridViewTextBoxColumn";
-            // 
-            // productIdDataGridViewTextBoxColumn
-            // 
-            this.productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
-            this.productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
-            this.productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
-            // 
-            // quantityPurchasedDataGridViewTextBoxColumn
-            // 
-            this.quantityPurchasedDataGridViewTextBoxColumn.DataPropertyName = "QuantityPurchased";
-            this.quantityPurchasedDataGridViewTextBoxColumn.HeaderText = "QuantityPurchased";
-            this.quantityPurchasedDataGridViewTextBoxColumn.Name = "quantityPurchasedDataGridViewTextBoxColumn";
-            // 
-            // btnSaveInvoiceDetail
-            // 
-            this.btnSaveInvoiceDetail.HeaderText = "Save";
-            this.btnSaveInvoiceDetail.Name = "btnSaveInvoiceDetail";
-            this.btnSaveInvoiceDetail.ReadOnly = true;
-            this.btnSaveInvoiceDetail.Text = "save";
+            // txtDeleteId
+            // 
+            this.txtDeleteId.Location = new System.Drawing.Point(708, 326);
+            this.txtDeleteId.Name = "txtDeleteId";
+            this.txtDeleteId.Size = new System.Drawing.Size(75, 20);
+            this.txtDeleteId.TabIndex = 7;
+            this.txtDeleteId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // btnDeleteById
+            // 
+            this.btnDeleteById.Location = new System.Drawing.Point(708, 352);
+            this.btnDeleteById.Name = "btnDeleteById";
+            this.btnDeleteById.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteById.TabIndex = 8;
+            this.btnDeleteById.Text = "Delete by id!";
+            this.btnDeleteById.UseVisualStyleBackColor = true;
+            this.btnDeleteById.Click += new System.EventHandler(this.btnDeleteById_Click);
             // 
             // Admin
             // 
@@ -1636,6 +1658,7 @@ namespace Final
             ((System.ComponentModel.ISupportInitialize)(this.purchaseOrderDetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalDataSet14)).EndInit();
             this.tabPageProduct.ResumeLayout(false);
+            this.tabPageProduct.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalDataSet15)).EndInit();
@@ -1825,5 +1848,7 @@ namespace Final
         private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityPurchasedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn btnSaveInvoiceDetail;
+        private System.Windows.Forms.TextBox txtDeleteId;
+        private System.Windows.Forms.Button btnDeleteById;
     }
 }
