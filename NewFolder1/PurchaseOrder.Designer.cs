@@ -29,13 +29,24 @@ namespace Final.NewFolder1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchaseOrder));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReturn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSaveInfo = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.finalDataSetpo = new Final.FinalDataSetpo();
+            this.purchaseOrdersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.purchaseOrdersTableAdapter = new Final.FinalDataSetpoTableAdapters.PurchaseOrdersTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchaseDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalPaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vendorIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetpo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseOrdersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -59,9 +70,16 @@ namespace Final.NewFolder1
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.btnSaveInfo});
+            this.btnSaveInfo,
+            this.idDataGridViewTextBoxColumn,
+            this.createdAtDataGridViewTextBoxColumn,
+            this.purchaseDateDataGridViewTextBoxColumn,
+            this.totalPaidDataGridViewTextBoxColumn,
+            this.vendorIdDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.purchaseOrdersBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 106);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(695, 332);
@@ -71,6 +89,51 @@ namespace Final.NewFolder1
             // 
             this.btnSaveInfo.HeaderText = "Save";
             this.btnSaveInfo.Name = "btnSaveInfo";
+            // 
+            // finalDataSetpo
+            // 
+            this.finalDataSetpo.DataSetName = "FinalDataSetpo";
+            this.finalDataSetpo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // purchaseOrdersBindingSource
+            // 
+            this.purchaseOrdersBindingSource.DataMember = "PurchaseOrders";
+            this.purchaseOrdersBindingSource.DataSource = this.finalDataSetpo;
+            // 
+            // purchaseOrdersTableAdapter
+            // 
+            this.purchaseOrdersTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn
+            // 
+            this.createdAtDataGridViewTextBoxColumn.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn.Name = "createdAtDataGridViewTextBoxColumn";
+            // 
+            // purchaseDateDataGridViewTextBoxColumn
+            // 
+            this.purchaseDateDataGridViewTextBoxColumn.DataPropertyName = "PurchaseDate";
+            this.purchaseDateDataGridViewTextBoxColumn.HeaderText = "PurchaseDate";
+            this.purchaseDateDataGridViewTextBoxColumn.Name = "purchaseDateDataGridViewTextBoxColumn";
+            // 
+            // totalPaidDataGridViewTextBoxColumn
+            // 
+            this.totalPaidDataGridViewTextBoxColumn.DataPropertyName = "TotalPaid";
+            this.totalPaidDataGridViewTextBoxColumn.HeaderText = "TotalPaid";
+            this.totalPaidDataGridViewTextBoxColumn.Name = "totalPaidDataGridViewTextBoxColumn";
+            // 
+            // vendorIdDataGridViewTextBoxColumn
+            // 
+            this.vendorIdDataGridViewTextBoxColumn.DataPropertyName = "VendorId";
+            this.vendorIdDataGridViewTextBoxColumn.HeaderText = "VendorId";
+            this.vendorIdDataGridViewTextBoxColumn.Name = "vendorIdDataGridViewTextBoxColumn";
             // 
             // PurchaseOrder
             // 
@@ -82,8 +145,11 @@ namespace Final.NewFolder1
             this.Controls.Add(this.pictureBox1);
             this.Name = "PurchaseOrder";
             this.Text = "PurchaseOrder";
+            this.Load += new System.EventHandler(this.PurchaseOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetpo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseOrdersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -94,5 +160,13 @@ namespace Final.NewFolder1
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewButtonColumn btnSaveInfo;
+        private FinalDataSetpo finalDataSetpo;
+        private System.Windows.Forms.BindingSource purchaseOrdersBindingSource;
+        private FinalDataSetpoTableAdapters.PurchaseOrdersTableAdapter purchaseOrdersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createdAtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn purchaseDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalPaidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vendorIdDataGridViewTextBoxColumn;
     }
 }

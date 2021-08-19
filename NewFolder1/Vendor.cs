@@ -109,6 +109,8 @@ namespace Final.NewFolder1
 
         private void Vendor_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'finalDataSetv.Vendors' table. You can move, or remove it, as needed.
+            vendorsTableAdapter.Fill(finalDataSetv.Vendors);
 
         }
     }

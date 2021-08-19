@@ -16,5 +16,12 @@ namespace Final.NewFolder1
         {
             InitializeComponent();
         }
+
+        private void Product_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'finalDataSetp.Products' table. You can move, or remove it, as needed.
+            this.productsTableAdapter.Fill(this.finalDataSetp.Products);
+
+        }
     }
 }

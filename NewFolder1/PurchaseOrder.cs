@@ -16,5 +16,12 @@ namespace Final.NewFolder1
         {
             InitializeComponent();
         }
+
+        private void PurchaseOrder_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'finalDataSetpo.PurchaseOrders' table. You can move, or remove it, as needed.
+            this.purchaseOrdersTableAdapter.Fill(this.finalDataSetpo.PurchaseOrders);
+
+        }
     }
 }

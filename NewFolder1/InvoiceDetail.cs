@@ -16,5 +16,12 @@ namespace Final.NewFolder1
         {
             InitializeComponent();
         }
+
+        private void InvoiceDetail_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'finalDataSetid.InvoiceDetails' table. You can move, or remove it, as needed.
+            this.invoiceDetailsTableAdapter.Fill(this.finalDataSetid.InvoiceDetails);
+
+        }
     }
 }
