@@ -35,18 +35,18 @@ namespace Final.NewFolder1
             this.btnReturn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSaveInfo = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.finalDataSetpod = new Final.FinalDataSetpod();
-            this.purchaseOrderDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.purchaseOrderDetailsTableAdapter = new Final.FinalDataSetpodTableAdapters.PurchaseOrderDetailsTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityPurchasedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchaseOrderIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchaseOrderDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.finalDataSetpod = new Final.FinalDataSetpod();
+            this.purchaseOrderDetailsTableAdapter = new Final.FinalDataSetpodTableAdapters.PurchaseOrderDetailsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetpod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseOrderDetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetpod)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -84,25 +84,12 @@ namespace Final.NewFolder1
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(695, 332);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnSaveInfo
             // 
             this.btnSaveInfo.HeaderText = "Save";
             this.btnSaveInfo.Name = "btnSaveInfo";
-            // 
-            // finalDataSetpod
-            // 
-            this.finalDataSetpod.DataSetName = "FinalDataSetpod";
-            this.finalDataSetpod.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // purchaseOrderDetailsBindingSource
-            // 
-            this.purchaseOrderDetailsBindingSource.DataMember = "PurchaseOrderDetails";
-            this.purchaseOrderDetailsBindingSource.DataSource = this.finalDataSetpod;
-            // 
-            // purchaseOrderDetailsTableAdapter
-            // 
-            this.purchaseOrderDetailsTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -135,6 +122,20 @@ namespace Final.NewFolder1
             this.purchaseOrderIdDataGridViewTextBoxColumn.HeaderText = "PurchaseOrderId";
             this.purchaseOrderIdDataGridViewTextBoxColumn.Name = "purchaseOrderIdDataGridViewTextBoxColumn";
             // 
+            // purchaseOrderDetailsBindingSource
+            // 
+            this.purchaseOrderDetailsBindingSource.DataMember = "PurchaseOrderDetails";
+            this.purchaseOrderDetailsBindingSource.DataSource = this.finalDataSetpod;
+            // 
+            // finalDataSetpod
+            // 
+            this.finalDataSetpod.DataSetName = "FinalDataSetpod";
+            this.finalDataSetpod.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // purchaseOrderDetailsTableAdapter
+            // 
+            this.purchaseOrderDetailsTableAdapter.ClearBeforeFill = true;
+            // 
             // PurchaseOrderDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,8 +149,8 @@ namespace Final.NewFolder1
             this.Load += new System.EventHandler(this.PurchaseOrderDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetpod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseOrderDetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetpod)).EndInit();
             this.ResumeLayout(false);
 
         }

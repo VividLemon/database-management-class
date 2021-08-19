@@ -35,18 +35,18 @@ namespace Final.NewFolder1
             this.btnReturn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSaveInfo = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.finalDataSetid = new Final.FinalDataSetid();
-            this.invoiceDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.invoiceDetailsTableAdapter = new Final.FinalDataSetidTableAdapters.InvoiceDetailsTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.invoiceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityPurchasedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.finalDataSetid = new Final.FinalDataSetid();
+            this.invoiceDetailsTableAdapter = new Final.FinalDataSetidTableAdapters.InvoiceDetailsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceDetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetid)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -84,25 +84,12 @@ namespace Final.NewFolder1
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(695, 332);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnSaveInfo
             // 
             this.btnSaveInfo.HeaderText = "Save";
             this.btnSaveInfo.Name = "btnSaveInfo";
-            // 
-            // finalDataSetid
-            // 
-            this.finalDataSetid.DataSetName = "FinalDataSetid";
-            this.finalDataSetid.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // invoiceDetailsBindingSource
-            // 
-            this.invoiceDetailsBindingSource.DataMember = "InvoiceDetails";
-            this.invoiceDetailsBindingSource.DataSource = this.finalDataSetid;
-            // 
-            // invoiceDetailsTableAdapter
-            // 
-            this.invoiceDetailsTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -135,6 +122,20 @@ namespace Final.NewFolder1
             this.quantityPurchasedDataGridViewTextBoxColumn.HeaderText = "QuantityPurchased";
             this.quantityPurchasedDataGridViewTextBoxColumn.Name = "quantityPurchasedDataGridViewTextBoxColumn";
             // 
+            // invoiceDetailsBindingSource
+            // 
+            this.invoiceDetailsBindingSource.DataMember = "InvoiceDetails";
+            this.invoiceDetailsBindingSource.DataSource = this.finalDataSetid;
+            // 
+            // finalDataSetid
+            // 
+            this.finalDataSetid.DataSetName = "FinalDataSetid";
+            this.finalDataSetid.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // invoiceDetailsTableAdapter
+            // 
+            this.invoiceDetailsTableAdapter.ClearBeforeFill = true;
+            // 
             // InvoiceDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,8 +149,8 @@ namespace Final.NewFolder1
             this.Load += new System.EventHandler(this.InvoiceDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceDetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetid)).EndInit();
             this.ResumeLayout(false);
 
         }

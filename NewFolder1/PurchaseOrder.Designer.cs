@@ -35,18 +35,18 @@ namespace Final.NewFolder1
             this.btnReturn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSaveInfo = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.finalDataSetpo = new Final.FinalDataSetpo();
-            this.purchaseOrdersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.purchaseOrdersTableAdapter = new Final.FinalDataSetpoTableAdapters.PurchaseOrdersTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchaseDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalPaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vendorIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchaseOrdersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.finalDataSetpo = new Final.FinalDataSetpo();
+            this.purchaseOrdersTableAdapter = new Final.FinalDataSetpoTableAdapters.PurchaseOrdersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetpo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseOrdersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetpo)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -84,25 +84,12 @@ namespace Final.NewFolder1
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(695, 332);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnSaveInfo
             // 
             this.btnSaveInfo.HeaderText = "Save";
             this.btnSaveInfo.Name = "btnSaveInfo";
-            // 
-            // finalDataSetpo
-            // 
-            this.finalDataSetpo.DataSetName = "FinalDataSetpo";
-            this.finalDataSetpo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // purchaseOrdersBindingSource
-            // 
-            this.purchaseOrdersBindingSource.DataMember = "PurchaseOrders";
-            this.purchaseOrdersBindingSource.DataSource = this.finalDataSetpo;
-            // 
-            // purchaseOrdersTableAdapter
-            // 
-            this.purchaseOrdersTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -135,6 +122,20 @@ namespace Final.NewFolder1
             this.vendorIdDataGridViewTextBoxColumn.HeaderText = "VendorId";
             this.vendorIdDataGridViewTextBoxColumn.Name = "vendorIdDataGridViewTextBoxColumn";
             // 
+            // purchaseOrdersBindingSource
+            // 
+            this.purchaseOrdersBindingSource.DataMember = "PurchaseOrders";
+            this.purchaseOrdersBindingSource.DataSource = this.finalDataSetpo;
+            // 
+            // finalDataSetpo
+            // 
+            this.finalDataSetpo.DataSetName = "FinalDataSetpo";
+            this.finalDataSetpo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // purchaseOrdersTableAdapter
+            // 
+            this.purchaseOrdersTableAdapter.ClearBeforeFill = true;
+            // 
             // PurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,8 +149,8 @@ namespace Final.NewFolder1
             this.Load += new System.EventHandler(this.PurchaseOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetpo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseOrdersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetpo)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using Final.Models;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Final.NewFolder1
@@ -20,7 +15,104 @@ namespace Final.NewFolder1
         private void PurchaseOrder_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'finalDataSetpo.PurchaseOrders' table. You can move, or remove it, as needed.
-            this.purchaseOrdersTableAdapter.Fill(this.finalDataSetpo.PurchaseOrders);
+            purchaseOrdersTableAdapter.Fill(finalDataSetpo.PurchaseOrders);
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+            int id = (int)row.Cells[0].Value;
+            DateTime purchaseDate = DateTime.Parse(row.Cells[2].Value.ToString());
+            decimal totalPaid = (decimal)row.Cells[3].Value;
+            int vendorId = (int)row.Cells[4].Value;
+            bool validate()
+            {
+                if (id.ToString() == "")
+                {
+                    MessageBox.Show("Id cell is empty. How?");
+                    return false;
+                }
+                else if (row.Cells[1].Value.ToString() != "" && id < 0)
+                {
+                    MessageBox.Show("Created at is implemented by the database. It is a readonly field. How did you get here?");
+                    return false;
+                }
+                else if (purchaseDate.ToString() == "")
+                {
+                    MessageBox.Show("Purchase Date is required");
+                    return false;
+                }
+                else if (!DateTime.TryParse(row.Cells[2].Value.ToString(), out _))
+                {
+                    MessageBox.Show("Purchase date must be a valid datetime");
+                    return false;
+                }
+                else if (totalPaid.ToString() == "")
+                {
+                    MessageBox.Show("Total paid is required");
+                    return false;
+                }
+                else if (!decimal.TryParse(totalPaid.ToString(), out _))
+                {
+                    MessageBox.Show("Total paid must be a number");
+                    return false;
+                }
+                else if (vendorId.ToString() == "")
+                {
+                    MessageBox.Show("VendorId is required");
+                    return false;
+                }
+                return true;
+            }
+            if (dataGridView1.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0 && validate())
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to do this?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    using (DatabaseContext context = new DatabaseContext())
+                    {
+                        try
+                        {
+                            Models.Vendor vendor = context.Vendors.SingleOrDefault(v => v.Id == vendorId);
+                            if (vendor == null)
+                            {
+                                MessageBox.Show("Vendor could not be found from database. Returning");
+                                Owner.Show();
+                                Close();
+                            }
+                            if (id > 0)
+                            {
+                                DateTime createdAt = DateTime.Parse(row.Cells[1].Value.ToString());
+                                Models.PurchaseOrder purchaseOrder = new Models.PurchaseOrder { Id = id, CreatedAt = createdAt, PurchaseDate = purchaseDate, TotalPaid = totalPaid, Vendor = vendor };
+                                context.PurchaseOrders.Update(purchaseOrder);
+                            }
+                            else
+                            {
+                                Models.PurchaseOrder purchaseOrder = new Models.PurchaseOrder { PurchaseDate = purchaseDate, TotalPaid = totalPaid, Vendor = vendor };
+                                context.PurchaseOrders.Add(purchaseOrder);
+                            }
+                            int val = context.SaveChanges();
+                            if (val < 1)
+                            {
+                                MessageBox.Show("Unexpected issue. Unable to make change. Try again");
+                            }
+                            else
+                            {
+                                MessageBox.Show($"Successfully changed {val} row");
+                                PurchaseOrder_Load(sender, e);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Unexpected error. Returning\n\n{ex}");
+                            Owner.Show();
+                            Close();
+                        }
+                    }
+                }
+            }
 
         }
     }
