@@ -29,13 +29,22 @@ namespace Final.NewFolder1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BusinessType));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReturn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSaveInfo = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.finalDataSetbt = new Final.FinalDataSetbt();
+            this.businessTypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.businessTypesTableAdapter = new Final.FinalDataSetbtTableAdapters.BusinessTypesTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetbt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.businessTypesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -59,9 +68,14 @@ namespace Final.NewFolder1
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.btnSaveInfo});
+            this.btnSaveInfo,
+            this.idDataGridViewTextBoxColumn,
+            this.createdAtDataGridViewTextBoxColumn,
+            this.typeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.businessTypesBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 106);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(695, 332);
@@ -71,6 +85,39 @@ namespace Final.NewFolder1
             // 
             this.btnSaveInfo.HeaderText = "Save";
             this.btnSaveInfo.Name = "btnSaveInfo";
+            // 
+            // finalDataSetbt
+            // 
+            this.finalDataSetbt.DataSetName = "FinalDataSetbt";
+            this.finalDataSetbt.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // businessTypesBindingSource
+            // 
+            this.businessTypesBindingSource.DataMember = "BusinessTypes";
+            this.businessTypesBindingSource.DataSource = this.finalDataSetbt;
+            // 
+            // businessTypesTableAdapter
+            // 
+            this.businessTypesTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn
+            // 
+            this.createdAtDataGridViewTextBoxColumn.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn.Name = "createdAtDataGridViewTextBoxColumn";
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
             // 
             // BusinessType
             // 
@@ -82,8 +129,11 @@ namespace Final.NewFolder1
             this.Controls.Add(this.pictureBox1);
             this.Name = "BusinessType";
             this.Text = "BusinessType";
+            this.Load += new System.EventHandler(this.BusinessType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetbt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.businessTypesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -94,5 +144,11 @@ namespace Final.NewFolder1
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewButtonColumn btnSaveInfo;
+        private FinalDataSetbt finalDataSetbt;
+        private System.Windows.Forms.BindingSource businessTypesBindingSource;
+        private FinalDataSetbtTableAdapters.BusinessTypesTableAdapter businessTypesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createdAtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
     }
 }

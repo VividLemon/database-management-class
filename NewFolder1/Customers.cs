@@ -16,5 +16,12 @@ namespace Final.NewFolder1
         {
             InitializeComponent();
         }
+
+        private void Customers_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'finalDataSetc.Customers' table. You can move, or remove it, as needed.
+            this.customersTableAdapter.Fill(this.finalDataSetc.Customers);
+
+        }
     }
 }

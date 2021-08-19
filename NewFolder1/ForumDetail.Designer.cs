@@ -29,13 +29,24 @@ namespace Final.NewFolder1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForumDetail));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReturn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSaveInfo = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.finalDataSetfd = new Final.FinalDataSetfd();
+            this.forumDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.forumDetailsTableAdapter = new Final.FinalDataSetfdTableAdapters.ForumDetailsTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.forumIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetfd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.forumDetailsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -59,9 +70,16 @@ namespace Final.NewFolder1
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.btnSaveInfo});
+            this.btnSaveInfo,
+            this.idDataGridViewTextBoxColumn,
+            this.createdAtDataGridViewTextBoxColumn,
+            this.contentDataGridViewTextBoxColumn,
+            this.forumIdDataGridViewTextBoxColumn,
+            this.userIdDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.forumDetailsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 106);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(695, 332);
@@ -71,6 +89,51 @@ namespace Final.NewFolder1
             // 
             this.btnSaveInfo.HeaderText = "Save";
             this.btnSaveInfo.Name = "btnSaveInfo";
+            // 
+            // finalDataSetfd
+            // 
+            this.finalDataSetfd.DataSetName = "FinalDataSetfd";
+            this.finalDataSetfd.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // forumDetailsBindingSource
+            // 
+            this.forumDetailsBindingSource.DataMember = "ForumDetails";
+            this.forumDetailsBindingSource.DataSource = this.finalDataSetfd;
+            // 
+            // forumDetailsTableAdapter
+            // 
+            this.forumDetailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // createdAtDataGridViewTextBoxColumn
+            // 
+            this.createdAtDataGridViewTextBoxColumn.DataPropertyName = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn.HeaderText = "CreatedAt";
+            this.createdAtDataGridViewTextBoxColumn.Name = "createdAtDataGridViewTextBoxColumn";
+            // 
+            // contentDataGridViewTextBoxColumn
+            // 
+            this.contentDataGridViewTextBoxColumn.DataPropertyName = "Content";
+            this.contentDataGridViewTextBoxColumn.HeaderText = "Content";
+            this.contentDataGridViewTextBoxColumn.Name = "contentDataGridViewTextBoxColumn";
+            // 
+            // forumIdDataGridViewTextBoxColumn
+            // 
+            this.forumIdDataGridViewTextBoxColumn.DataPropertyName = "ForumId";
+            this.forumIdDataGridViewTextBoxColumn.HeaderText = "ForumId";
+            this.forumIdDataGridViewTextBoxColumn.Name = "forumIdDataGridViewTextBoxColumn";
+            // 
+            // userIdDataGridViewTextBoxColumn
+            // 
+            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
+            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
+            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
             // 
             // ForumDetail
             // 
@@ -82,8 +145,11 @@ namespace Final.NewFolder1
             this.Controls.Add(this.pictureBox1);
             this.Name = "ForumDetail";
             this.Text = "ForumDetail";
+            this.Load += new System.EventHandler(this.ForumDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalDataSetfd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.forumDetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -94,5 +160,13 @@ namespace Final.NewFolder1
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewButtonColumn btnSaveInfo;
+        private FinalDataSetfd finalDataSetfd;
+        private System.Windows.Forms.BindingSource forumDetailsBindingSource;
+        private FinalDataSetfdTableAdapters.ForumDetailsTableAdapter forumDetailsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createdAtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn forumIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
     }
 }

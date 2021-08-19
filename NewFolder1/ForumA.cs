@@ -16,5 +16,12 @@ namespace Final.NewFolder1
         {
             InitializeComponent();
         }
+
+        private void ForumA_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'finalDataSetf.Forums' table. You can move, or remove it, as needed.
+            this.forumsTableAdapter.Fill(this.finalDataSetf.Forums);
+
+        }
     }
 }
